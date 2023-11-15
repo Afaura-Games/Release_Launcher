@@ -18,8 +18,8 @@ function DestroyWindow() {
 function ChekUpdateWin() {
     CheckUpdateWindow = new electron.BrowserWindow({
         title: "Mise à jour",
-        width: 1280,
-        height: 720,
+        width: 400,
+        height: 500,
         resizable: false,
         frame: false,
         show: false,
