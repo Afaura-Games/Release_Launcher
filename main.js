@@ -102,6 +102,14 @@ autoUpdater.on("update-available", (info) => {
     UpdateWin();
     function DlUpdate() {
         autoUpdater.downloadUpdate();
+        autoUpdater.on("update-downloaded", (info) => {
+            DestroyWindow();
+            RestartWin();
+            function Restart() {
+                app.relaunch()
+                app.exit()
+            }
+        });
     }
 });
 
@@ -110,7 +118,7 @@ autoUpdater.on("update-not-available", (info) => {
     LauncherWindow.createWindow();
 });
 
-/* Redémarrer l'application */
+/* Redémarrer l'application 
 autoUpdater.on("update-downloaded", (info) => {
     DestroyWindow();
     RestartWin();
@@ -118,7 +126,7 @@ autoUpdater.on("update-downloaded", (info) => {
         app.relaunch()
         app.exit()
     }
-});
+});*/
   
 autoUpdater.on("error", (info) => {
 });
