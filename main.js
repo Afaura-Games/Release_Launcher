@@ -18,8 +18,8 @@ function DestroyWindow() {
 function ChekUpdateWin() {
     CheckUpdateWindow = new electron.BrowserWindow({
         title: "Mise à jour",
-        width: 400,
-        height: 500,
+        width: 1280,
+        height: 720,
         resizable: false,
         frame: false,
         show: false,
@@ -93,24 +93,57 @@ app.whenReady().then(() => {
             ChekUpdateWin();
         }
     })
-    autoUpdater.checkForUpdates();
 })
 
+/* Vérifier la disponibilité d'une mise à jour*/
+autoUpdater.checkForUpdates();
+
 /* Mise à jour disponible */
+
+// Ecouter l'événement 'update-available' qui est émis quand une mise à jour est trouvée
+autoUpdater.on("update-available", () => {
+    // Créer un bouton qui permet à l'utilisateur de télécharger la mise à jour
+    let button = document.createElement("button");
+    button.textContent = "Télécharger la mise à jour";
+    button.addEventListener("click", () => {
+      // Déclencher le téléchargement de la mise à jour
+      autoUpdater.downloadUpdate();
+    });
+    document.body.appendChild(button);
+});
+
+// Ecouter l'événement 'update-downloaded' qui est émis quand la mise à jour est téléchargée
+autoUpdater.on("update-downloaded", () => {
+    // Créer un bouton qui permet à l'utilisateur d'installer la mise à jour
+    let button = document.createElement("button");
+    button.textContent = "Installer la mise à jour";
+    button.addEventListener("click", () => {
+      // Quitter l'application et installer la mise à jour
+      autoUpdater.quitAndInstall();
+    });
+    document.body.appendChild(button);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 autoUpdater.on("update-available", (info) => {
     destroyWindow();
     UpdateWin();
-    /*function DlUpdate() {
+    function DlUpdate() {
         autoUpdater.downloadUpdate();
-        autoUpdater.on("update-downloaded", (info) => {
-            DestroyWindow();
-            RestartWin();
-            function Restart() {
-                app.relaunch()
-                app.exit()
-            }
-        });
-    }*/
+    }
 });
 
 autoUpdater.on("update-not-available", (info) => {
@@ -118,7 +151,7 @@ autoUpdater.on("update-not-available", (info) => {
     LauncherWindow.createWindow();
 });
 
-/* Redémarrer l'application 
+ Redémarrer l'application
 autoUpdater.on("update-downloaded", (info) => {
     DestroyWindow();
     RestartWin();
@@ -126,13 +159,13 @@ autoUpdater.on("update-downloaded", (info) => {
         app.relaunch()
         app.exit()
     }
-});*/
+});
   
 autoUpdater.on("error", (info) => {
 });
 
 
-/* Gestion de la fermeture de toutes les fenêtres */
+ Gestion de la fermeture de toutes les fenêtres */
 app.on('window-all-closed', () => {
     if(process.platform !== 'darwin') {
         app.quit()
