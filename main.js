@@ -102,6 +102,7 @@ autoUpdater.on("update-available", () => {
     /* Créer un bouton qui permet à l'utilisateur de télécharger la mise à jour */
     let button = document.getElementById("dl-btn");
     button.addEventListener("click", () => {
+        alert("yess");
       /* Déclencher le téléchargement de la mise à jour */
       autoUpdater.downloadUpdate();
     });
@@ -118,6 +119,7 @@ autoUpdater.on("update-downloaded", () => {
     /* Créer un bouton qui permet à l'utilisateur d'installer la mise à jour */
     let button = document.getElementById("restart-btn");
     button.addEventListener("click", () => {
+        alert("yess !");
       /* Quitter l'application et installer la mise à jour */
       autoUpdater.quitAndInstall();
     });
