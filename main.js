@@ -84,40 +84,46 @@ function RestartWin() {
     });
 }
 
-// Quand electron est prêt !
+/* Quand electron est prêt ! */
 app.whenReady().then(() => {
-    LauncherWindow.createWindow();
+    ChekUpdateWin();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            LauncherWindow.createWindow();
+            ChekUpdateWin();
         }
     })
     autoUpdater.checkForUpdates();
 })
 
-// Ecouter l'événement 'update-available' qui est émis quand une mise à jour est trouvée
 autoUpdater.on("update-available", () => {
-    // Créer un bouton qui permet à l'utilisateur de télécharger la mise à jour
-    let button = document.createElement("button");
-    button.textContent = "Télécharger la mise à jour";
+    destroyWindow();
+    UpdateWin();
+    /* Créer un bouton qui permet à l'utilisateur de télécharger la mise à jour */
+    let button = document.getElementById("dl-btn");
     button.addEventListener("click", () => {
-      // Déclencher le téléchargement de la mise à jour
+      /* Déclencher le téléchargement de la mise à jour */
       autoUpdater.downloadUpdate();
     });
-    document.body.appendChild(button);
 });
 
-// Ecouter l'événement 'update-downloaded' qui est émis quand la mise à jour est téléchargée
+autoUpdater.on("update-not-available", () => {
+    destroyWindow();
+    LauncherWindow.createWindow();
+});
+
 autoUpdater.on("update-downloaded", () => {
-    // Créer un bouton qui permet à l'utilisateur d'installer la mise à jour
-    let button = document.createElement("button");
-    button.textContent = "Installer la mise à jour";
+    DestroyWindow();
+    RestartWin();
+    /* Créer un bouton qui permet à l'utilisateur d'installer la mise à jour */
+    let button = document.getElementById("restart-btn");
     button.addEventListener("click", () => {
-      // Quitter l'application et installer la mise à jour
+      /* Quitter l'application et installer la mise à jour */
       autoUpdater.quitAndInstall();
     });
-    document.body.appendChild(button);
+});
+
+autoUpdater.on("error", () => {
 });
 
 
