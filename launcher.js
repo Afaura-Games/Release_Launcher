@@ -25,6 +25,10 @@ function createWindow() {
     });
 }
 
+function a() {
+    window.close()
+}
+
 module.exports = {
     createWindow,
 };

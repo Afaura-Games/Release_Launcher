@@ -17,7 +17,7 @@
     justify-content: center;
     flex-direction: column;
 }
-.btn{
+.btn-dl{
     margin-top: 180px;
     padding: 12px 0px;
     width: 220px;
@@ -31,7 +31,7 @@
     border-radius: 10px;
     transition: background 0.2s;
 }
-.btn:hover{
+.btn-dl:hover{
     background-color: var(--hover-color);
     cursor: pointer;
 }
