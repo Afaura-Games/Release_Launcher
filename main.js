@@ -100,7 +100,7 @@ app.whenReady().then(() => {
 autoUpdater.on("update-available", (info) => {
     destroyWindow();
     UpdateWin();
-    function DlUpdate() {
+    /*function DlUpdate() {
         autoUpdater.downloadUpdate();
         autoUpdater.on("update-downloaded", (info) => {
             DestroyWindow();
@@ -110,7 +110,7 @@ autoUpdater.on("update-available", (info) => {
                 app.exit()
             }
         });
-    }
+    }*/
 });
 
 autoUpdater.on("update-not-available", (info) => {
