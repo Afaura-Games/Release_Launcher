@@ -86,11 +86,11 @@ function RestartWin() {
 
 // Quand electron est prêt !
 app.whenReady().then(() => {
-    LauncherWindow.createWindow();
+    ChekUpdateWin();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            LauncherWindow.createWindow();
+            ChekUpdateWin();
         }
     })
     autoUpdater.checkForUpdates();
