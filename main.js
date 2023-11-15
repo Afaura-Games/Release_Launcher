@@ -93,12 +93,8 @@ app.whenReady().then(() => {
             ChekUpdateWin();
         }
     })
+    autoUpdater.checkForUpdates();
 })
-
-/* Vérifier la disponibilité d'une mise à jour*/
-autoUpdater.checkForUpdates();
-
-/* Mise à jour disponible */
 
 // Ecouter l'événement 'update-available' qui est émis quand une mise à jour est trouvée
 autoUpdater.on("update-available", () => {
