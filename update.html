@@ -12,4 +12,11 @@
         <p class="help">Un problème ? <a href="">Aide</a></p>
     </div>
 
+    <script>
+        let button = document.getElementById("dl-btn");
+        button.addEventListener("click", () => {
+            autoUpdater.downloadUpdate();
+        });
+    </script>
+
 </body>

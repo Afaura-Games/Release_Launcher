@@ -12,4 +12,11 @@
         <p class="help">Un problème ? <a href="">Aide</a></p>
     </div>
 
+    <script>
+        let button = document.getElementById("restart-btn");
+        button.addEventListener("click", () => {
+            autoUpdater.quitAndInstall();
+        });
+    </script>
+
 </body>

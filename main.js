@@ -99,10 +99,6 @@ app.whenReady().then(() => {
 autoUpdater.on("update-available", () => {
     destroyWindow();
     UpdateWin();
-    let button = document.getElementById("dl-btn");
-    button.addEventListener("click", () => {
-      autoUpdater.downloadUpdate();
-    });
 });
 
 autoUpdater.on("update-not-available", () => {
@@ -113,10 +109,6 @@ autoUpdater.on("update-not-available", () => {
 autoUpdater.on("update-downloaded", () => {
     DestroyWindow();
     RestartWin();
-    let button = document.getElementById("restart-btn");
-    button.addEventListener("click", () => {
-      autoUpdater.quitAndInstall();
-    });
 });
 
 autoUpdater.on("error", () => {
