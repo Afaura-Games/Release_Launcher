@@ -1,5 +1,6 @@
 const electron = require("electron");
 const { app, ipcMain } = require('electron');
+const { autoUpdater } = require("electron-updater");
 let restartWindow = undefined;
 
 function RestartWin() {
@@ -26,8 +27,7 @@ function RestartWin() {
 }
 
 ipcMain.on('restart_app', () => {
-    app.relaunch();
-    app.quit();
+    autoUpdater.quitAndInstall();
 });
 
 module.exports = {
