@@ -1,42 +1,35 @@
 const { app, BrowserWindow } = require('electron');
 const { autoUpdater } = require("electron-updater");
-const LauncherWindow = require("./launcher");
-const RestartWindow = require("./restart");
-const UpdateWindow = require("./update");
-const CheckUpdateWin = require("./checkUpdate");
-
-function destroyWindow() {
-    CheckUpdateWin.close();
-}
-
-function DestroyWindow() {
-    UpdateWindow.close();
-}
+const {LauncherWin} = require("./launcher");
+const {RestartWin} = require("./restart");
+const {UpdateWin, DestroyWindow} = require("./update");
+const {CheckUpdateWin, destroyWindow} = require("./checkUpdate");
 
 /* Quand electron est prêt ! */
 app.whenReady().then(() => {
-    CheckUpdateWin.CheckUpdateWin();
+    CheckUpdateWin();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            CheckUpdateWin.CheckUpdateWin();
+            CheckUpdateWin();
         }
     })
+    autoUpdater.checkForUpdates();
 })
 
 autoUpdater.on("update-available", () => {
     destroyWindow();
-    UpdateWindow.UpdateWin();
+    UpdateWin();
 });
 
 autoUpdater.on("update-not-available", () => {
     destroyWindow();
-    LauncherWindow.LauncherWin();
+    LauncherWin();
 });
 
 autoUpdater.on("update-downloaded", () => {
     DestroyWindow();
-    RestartWindow.RestartWin();
+    RestartWin();
 });
 
 autoUpdater.on("error", () => {

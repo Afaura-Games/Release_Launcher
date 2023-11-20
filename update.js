@@ -26,10 +26,15 @@ function UpdateWin() {
     });
 }
 
+function DestroyWindow() {
+    updateWindow.close();
+}
+
 ipcMain.on('download_app', () => {
     autoUpdater.downloadUpdate();
 });
 
 module.exports = {
-    UpdateWin
+    UpdateWin,
+    DestroyWindow
 };

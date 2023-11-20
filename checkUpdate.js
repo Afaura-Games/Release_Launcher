@@ -1,5 +1,4 @@
 const electron = require("electron");
-const { autoUpdater } = require("electron-updater");
 let checkupdateWindow = undefined;
 
 function CheckUpdateWin() {
@@ -25,8 +24,11 @@ function CheckUpdateWin() {
     });
 }
 
-autoUpdater.checkForUpdates();
+function destroyWindow() {
+    checkupdateWindow.close();
+}
 
 module.exports = {
-    CheckUpdateWin
+    CheckUpdateWin,
+    destroyWindow
 };
