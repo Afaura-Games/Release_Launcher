@@ -1,8 +1,7 @@
 const electron = require("electron");
-const path = require("path");
 let launcherWindow = undefined;
 
-function createWindow() {
+function LauncherWin() {
     launcherWindow = new electron.BrowserWindow({
         title: "Mise à jour",
         width: 1280,
@@ -25,15 +24,10 @@ function createWindow() {
     });
 }
 
-var restart = 0;
-function app_restart() {
-    restart++
-    if(restart > 0) {
-        window.close();
-    }
+function Quit() {
+    window.close();
 }
 
 module.exports = {
-    createWindow,
-    restart
+    LauncherWin
 };
