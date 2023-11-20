@@ -8,15 +8,14 @@
     <div class="update-info">
         <img class="logo" src="icon.png" />
         <p class="desc">Une mise à jour du client Afaura est disponible !</p>
-        <button id="dl-btn" class="btn-dl">Télécharger</button>
+        <button id="dl-btn" class="btn-dl" onclick="download()">Télécharger</button>
         <p class="help">Un problème ? <a href="">Aide</a></p>
     </div>
 
     <script>
-        let button = document.getElementById("dl-btn");
-        button.addEventListener("click", () => {
+        function download() {
             autoUpdater.downloadUpdate();
-        });
+        }
     </script>
 
 </body>

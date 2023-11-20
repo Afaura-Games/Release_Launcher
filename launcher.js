@@ -25,10 +25,15 @@ function createWindow() {
     });
 }
 
-function a() {
-    window.close()
+var restart = 0;
+function app_restart() {
+    restart++
+    if(restart > 0) {
+        window.close();
+    }
 }
 
 module.exports = {
     createWindow,
+    restart
 };

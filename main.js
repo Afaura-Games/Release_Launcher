@@ -2,6 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const electron = require("electron");
 const { autoUpdater, AppUpdater } = require("electron-updater");
 const LauncherWindow = require("./launcher");
+const {restart} = require('./launcher');
 const path = require('path');
 let CheckUpdateWindow = undefined;
 let UpdateWindow = undefined;
@@ -82,18 +83,29 @@ function RestartWin() {
             RestartWindow.show();
         }
     });
+    /*restart = 0;
+    function app_restart() {
+        restart++;
+        if(restart > 0) {
+            window.close();
+            app.on('window-all-closed', () => {
+                app.relaunch();
+                app.quit();
+            })
+        }
+    }*/
 }
 
 /* Quand electron est prêt ! */
 app.whenReady().then(() => {
-    ChekUpdateWin();
+    LauncherWindow.createWindow();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            ChekUpdateWin();
+            LauncherWindow.createWindow();
         }
     })
-    autoUpdater.checkForUpdates();
+    /*autoUpdater.checkForUpdates();*/
 })
 
 autoUpdater.on("update-available", () => {
@@ -158,7 +170,20 @@ autoUpdater.on("error", (info) => {
  Gestion de la fermeture de toutes les fenêtres */
 app.on('window-all-closed', () => {
     if(process.platform !== 'darwin') {
-        app.quit()
+        if(restart > 0) {
+            app.relaunch();
+            app.quit();
+        }
+        else {
+            app.quit();
+        }
+        
     }
 })
 
+/*function jsp() {
+    app.on('window-all-closed', () => {
+        app.relaunch();
+        app.quit();
+    })
+}*/

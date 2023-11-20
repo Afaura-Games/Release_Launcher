@@ -8,15 +8,24 @@
     <div class="restart-info">
         <img class="logo" src="icon.png" />
         <p class="desc">Le client Afaura a été mis à jour !</p>
-        <button id="restart-btn" class="btn-restart">Redémarrer</button>
+        <button id="restart-btn" class="btn-restart" onclick="app_restart()">Redémarrer</button>
         <p class="help">Un problème ? <a href="">Aide</a></p>
     </div>
 
     <script>
-        let button = document.getElementById("restart-btn");
-        button.addEventListener("click", () => {
-            autoUpdater.quitAndInstall();
-        });
+    /*restart = 0;
+    function app_restart() {
+        const app = require("electron");
+        restart++;
+        if(restart > 0) {
+            window.close();
+            console.log(restart);
+            app.on('window-all-closed', () => {
+                    app.relaunch();
+                    app.quit();
+            })
+        }
+    }*/
     </script>
 
 </body>
