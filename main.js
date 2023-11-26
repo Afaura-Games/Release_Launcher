@@ -20,8 +20,8 @@ app.whenReady().then(() => {
 })
 
 autoUpdater.on("update-available", () => {
-    destroyWindow();
     UpdateWin();
+    destroyWindow();
 });
 
 autoUpdater.on("update-not-available", () => {
