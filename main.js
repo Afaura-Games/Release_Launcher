@@ -20,8 +20,8 @@ app.whenReady().then(() => {
 })
 
 autoUpdater.on("update-available", () => {
-    UpdateWin();
     destroyWindow();
+    UpdateWin();
 });
 
 autoUpdater.on("update-not-available", () => {
@@ -30,8 +30,8 @@ autoUpdater.on("update-not-available", () => {
 });
 
 autoUpdater.on("update-downloaded", () => {
-    RestartWin();
     DestroyWindow();
+    RestartWin();
 });
 
 autoUpdater.on("error", () => {
