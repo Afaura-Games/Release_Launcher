@@ -26,7 +26,7 @@ function CheckUpdateWin() {
 }
 
 function destroyWindow() {
-    UpdateWin();
+    /*UpdateWin();*/
     checkupdateWindow.close();
 }
 
