@@ -2,8 +2,8 @@ const { app, BrowserWindow } = require('electron');
 const { autoUpdater } = require("electron-updater");
 const {LauncherWin} = require("./launcher");
 const {RestartWin} = require("./restart");
-const {UpdateWin, DestroyWindow, z, x} = require("./update");
-const {CheckUpdateWin, destroyWindow, destroywindow} = require("./checkUpdate");
+const {UpdateWin, DestroyWindow} = require("./update");
+const {CheckUpdateWin, destroyWindow} = require("./checkUpdate");
 
 autoUpdater.autoDownload = false;
 
@@ -21,17 +21,17 @@ app.whenReady().then(() => {
 
 autoUpdater.on("update-available", () => {
     destroyWindow();
-    z();
+    UpdateWin();
 });
 
 autoUpdater.on("update-not-available", () => {
-    destroywindow()
+    destroyWindow();
     LauncherWin();
 });
 
 autoUpdater.on("update-downloaded", () => {
     DestroyWindow();
-    x();
+    RestartWin();
 });
 
 autoUpdater.on("error", () => {

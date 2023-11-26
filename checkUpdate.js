@@ -26,16 +26,10 @@ function CheckUpdateWin() {
 }
 
 function destroyWindow() {
-    /*UpdateWin();*/
-    checkupdateWindow.close();
-}
-
-function destroywindow() {
     checkupdateWindow.close();
 }
 
 module.exports = {
     CheckUpdateWin,
-    destroyWindow,
-    destroywindow
+    destroyWindow
 };
