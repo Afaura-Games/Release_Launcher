@@ -1,4 +1,5 @@
 const electron = require("electron");
+const { UpdateWin } = require("./update");
 let checkupdateWindow = undefined;
 
 function CheckUpdateWin() {
@@ -25,6 +26,7 @@ function CheckUpdateWin() {
 }
 
 function destroyWindow() {
+    UpdateWin();
     checkupdateWindow.close();
 }
 

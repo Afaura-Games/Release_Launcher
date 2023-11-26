@@ -21,7 +21,6 @@ app.whenReady().then(() => {
 
 autoUpdater.on("update-available", () => {
     destroyWindow();
-    UpdateWin();
 });
 
 autoUpdater.on("update-not-available", () => {
@@ -31,7 +30,6 @@ autoUpdater.on("update-not-available", () => {
 
 autoUpdater.on("update-downloaded", () => {
     DestroyWindow();
-    RestartWin();
 });
 
 autoUpdater.on("error", () => {

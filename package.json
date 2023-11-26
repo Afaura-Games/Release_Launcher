@@ -1,6 +1,6 @@
 {
   "name": "launcher_afaura-games",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Launcher officiel du studio : Afaura Games",
   "main": "main.js",
   "scripts": {

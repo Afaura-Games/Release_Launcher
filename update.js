@@ -1,6 +1,7 @@
 const electron = require("electron");
 const { app, ipcMain } = require('electron');
 const { autoUpdater } = require("electron-updater");
+const {RestartWin} = require("./restart");
 let updateWindow = undefined;
 
 function UpdateWin() {
@@ -27,6 +28,7 @@ function UpdateWin() {
 }
 
 function DestroyWindow() {
+    RestartWin();
     updateWindow.close();
 }
 
