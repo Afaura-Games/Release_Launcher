@@ -5,6 +5,8 @@ const {RestartWin} = require("./restart");
 const {UpdateWin, DestroyWindow} = require("./update");
 const {CheckUpdateWin, destroyWindow} = require("./checkUpdate");
 
+autoUpdater.autoDownload = false;
+
 /* Quand electron est prêt ! */
 app.whenReady().then(() => {
     CheckUpdateWin();
