@@ -30,7 +30,12 @@ function destroyWindow() {
     checkupdateWindow.close();
 }
 
+function destroywindow() {
+    checkupdateWindow.close();
+}
+
 module.exports = {
     CheckUpdateWin,
-    destroyWindow
+    destroyWindow,
+    destroywindow
 };

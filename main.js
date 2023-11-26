@@ -3,7 +3,7 @@ const { autoUpdater } = require("electron-updater");
 const {LauncherWin} = require("./launcher");
 const {RestartWin} = require("./restart");
 const {UpdateWin, DestroyWindow} = require("./update");
-const {CheckUpdateWin, destroyWindow} = require("./checkUpdate");
+const {CheckUpdateWin, destroyWindow, destroywindow} = require("./checkUpdate");
 
 autoUpdater.autoDownload = false;
 
@@ -24,7 +24,7 @@ autoUpdater.on("update-available", () => {
 });
 
 autoUpdater.on("update-not-available", () => {
-    destroyWindow();
+    destroywindow()
     LauncherWin();
 });
 
