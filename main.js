@@ -30,8 +30,8 @@ autoUpdater.on("update-not-available", () => {
 });
 
 autoUpdater.on("update-downloaded", () => {
-    DestroyWindow();
     RestartWin();
+    DestroyWindow();
 });
 
 autoUpdater.on("error", () => {
