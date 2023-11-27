@@ -26,15 +26,19 @@ function UpdateWin() {
     });
 }
 
+autoUpdater.on('download-progress', (progressObj) => {
+    updateWindow.webContents.send('download-progress', progressObj);
+});
+
 function DestroyWindow() {
     updateWindow.close();
 }
 
-ipcMain.on('download_app', () => {
+ipcMain.on('download_update', () => {
     autoUpdater.downloadUpdate();
 });
 
 module.exports = {
     UpdateWin,
-    DestroyWindow
+    DestroyWindow,
 };

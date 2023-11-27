@@ -18,7 +18,7 @@
     flex-direction: column;
 }
 .btn-restart{
-    margin-top: 180px;
+    margin-top: 160px;
     padding: 12px 0px;
     width: 220px;
     max-width: 220px;
@@ -38,6 +38,7 @@
 .help{
     color: rgb(59, 59, 59);
     font-size: 10px;
+    font-weight: 600;
 }
 
 body{

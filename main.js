@@ -2,18 +2,18 @@ const { app, BrowserWindow } = require('electron');
 const { autoUpdater } = require("electron-updater");
 const {LauncherWin} = require("./launcher");
 const {RestartWin} = require("./restart");
-const {UpdateWin, DestroyWindow} = require("./update");
+const {UpdateWin, DestroyWindow } = require("./update");
 const {CheckUpdateWin, destroyWindow} = require("./checkUpdate");
 
 autoUpdater.autoDownload = false;
 
 /* Quand electron est prêt ! */
 app.whenReady().then(() => {
-    CheckUpdateWin();
+    UpdateWin();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            CheckUpdateWin();
+            UpdateWin();
         }
     })
     autoUpdater.checkForUpdates();
