@@ -5,7 +5,7 @@ let restartWindow = undefined;
 
 function RestartWin() {
     restartWindow = new electron.BrowserWindow({
-        title: "Mise à jour",
+        title: "Afaura Games - Mise à jour",
         width: 400,
         height: 500,
         resizable: false,

@@ -5,7 +5,7 @@ let updateWindow = undefined;
 
 function UpdateWin() {
     updateWindow = new electron.BrowserWindow({
-        title: "Mise à jour",
+        title: "Afaura Games - Mise à jour",
         width: 400,
         height: 500,
         resizable: false,

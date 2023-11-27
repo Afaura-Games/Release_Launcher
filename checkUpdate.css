@@ -1,65 +1,3 @@
-
-.logo {
-    width: 90px;
-    height: 90px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.desc{
-    font-size: 20px;
-    font-weight: 700;
-    max-width: 300px;
-    position: absolute;
-    top: 160;
-}
-.check-update-info{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.help{
-    color: rgb(59, 59, 59);
-    font-size: 13px;
-    font-weight: 600;
-    position: absolute;
-    bottom: 50px;
-}
-.loader{
-    position: absolute;
-    background-color: var(--background-color);
-    /*overflow: hidden;*/
-    /*width: 300px;
-    height: 300px;*/
-    top: 295px;
-    /*left: 160px;*/
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;  
-    /*z-index: 100000;*/
-}
-.loader__element{
-    border-radius: 100%;
-    border: var(--size) solid var(--point-color);
-    margin: calc(var(--size)*2);
-}
-  
-.loader__element:nth-child(1){
-    animation: preloader .6s ease-in-out alternate infinite;
-}
-.loader__element:nth-child(2){
-    animation: preloader .6s ease-in-out alternate .2s infinite;
-}
-  
-.loader__element:nth-child(3){
-    animation: preloader .6s ease-in-out alternate .4s infinite;
-}
-  
-@keyframes preloader{
-    100% { transform: scale(2); }
-}
 body{
     --main-color: #FF7C00;
     --hover-color: #FF9700;
@@ -68,4 +6,45 @@ body{
     background-color: var(--background-color);
     --point-color: #000000;
     --size: 4px;
+}
+
+.check-update-info{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.loading-circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid grey; 
+    border-top: 6px solid transparent;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 145px;
+}
+
+.version-text{
+    font-size: 11px;
+    font-weight: 500;
+    max-width: 300px;
+    margin-top: 20px;
+    color: grey;
 }

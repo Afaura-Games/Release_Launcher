@@ -3,7 +3,7 @@ let launcherWindow = undefined;
 
 function LauncherWin() {
     launcherWindow = new electron.BrowserWindow({
-        title: "Mise à jour",
+        title: "Afaura Games",
         width: 1280,
         height: 720,
         resizable: false,

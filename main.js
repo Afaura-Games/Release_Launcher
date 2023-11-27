@@ -9,11 +9,11 @@ autoUpdater.autoDownload = false;
 
 /* Quand electron est prêt ! */
 app.whenReady().then(() => {
-    UpdateWin();
+    CheckUpdateWin();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            UpdateWin();
+            CheckUpdateWin();
         }
     })
     autoUpdater.checkForUpdates();

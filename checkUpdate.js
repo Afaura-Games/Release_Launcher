@@ -3,9 +3,9 @@ let checkupdateWindow = undefined;
 
 function CheckUpdateWin() {
     checkupdateWindow = new electron.BrowserWindow({
-        title: "Mise à jour",
-        width: 400,
-        height: 500,
+        title: "Afaura Games - Démarrage",
+        width: 350,
+        height: 400,
         resizable: false,
         frame: false,
         show: false,
