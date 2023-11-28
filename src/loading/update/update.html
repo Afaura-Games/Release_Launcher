@@ -1,0 +1,89 @@
+<head>
+    <link rel="stylesheet" href="../loading-app.css">
+    <script src="../loading-app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="update-info">
+
+        <!-- Affichage du logo -->
+        <div class="logo-update"></div>
+
+        <!-- Affichage du texte en haut de la page -->
+        <p class="desc-update">Une mise à jour du client Afaura est disponible !</p>
+
+        <!-- Création du bouton de téléchargement -->
+        <button class="btn-update" id="DownloadLaunch" onclick="Update()">Télécharger</button>
+
+        <div class="btn-update progress" id="DownloadProgress">
+            <div class="table">
+
+                <!-- Création et gestion du cercle à l'intérieur du bouton, une fois le téléchargement lancé -->
+                <div class="progress-table">
+                    <svg class="progress-ring" width="30" height="30">
+                        <circle class="progress-ring__circle" stroke="white" stroke-width="2" fill="transparent" r="13" cx="15" cy="15"/>
+                    </svg>
+                </div>
+
+                <div class="data-table">
+
+                    <!-- Affichage du texte à l'intérieur du bouton, une fois le clique effectué -->
+                    <p class="dtxt">Téléchargement</p>
+
+                    <!-- Affichage des informations du téléchargement dans le bouton, une fois le téléchargement lancé -->
+                    <p class="dinfo" id="download-info">0% | 0Mb/s</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="help-update">Un problème ? <a href="">Aide</a></p>
+    </div>
+
+    <script>
+
+        // Importation du module
+        const { ipcRenderer } = require('electron');
+
+        // Récupération des données de téléchargement
+        ipcRenderer.on('download-progress', (event, progressObj) => {
+            const percent = progressObj.percent.toFixed(2);
+            setProgress(Math.floor(percent))
+            const speedInMBps = (progressObj.bytesPerSecond / (1024 * 1024)).toFixed(2);
+            document.getElementById('download-info').innerText = `${Math.floor(percent)}% | ${speedInMBps}Mb/s`;
+        });
+
+        // Création d'un événement qui est appelé lorsque le bouton "Télécharger" est cliquer
+        function Update() { 
+            document.getElementById('DownloadLaunch').style.display = "none";
+            document.getElementById('DownloadProgress').style.display = "block";
+            ipcRenderer.send('update_app');
+        }
+
+        // Animation du bouton de téléchargement
+
+        // Création des variables pour définir les paramètres du cercle
+        var circle = document.querySelector('circle');
+        var radius = circle.r.baseVal.value;
+        var circumference = radius * 2 * Math.PI;
+
+        // Création du cercle
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = `${circumference}`;
+
+        // Création d'un événement qui met à jour la rotation du cercle en fonction de l'avancement du pourcentage de la mise à jour 
+        function setProgress(percent) {
+            const offset = circumference - percent / 100 * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+        setProgress(0)
+
+    </script>
+
+</body>

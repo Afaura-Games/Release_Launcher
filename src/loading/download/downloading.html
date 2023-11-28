@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="../loading-app.css">
+    <script src="../loading-app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="download-info">
+
+        <!-- Affichage du logo -->
+        <div class="logo-dl"></div>
+
+        <!-- Affichage du texte en haut de la page -->
+        <p class="desc-dl">Le client Afaura a été mis à jour !</p>
+
+        <!-- Création du bouton de redémarrage -->
+        <button class="btn-dl" onclick="Download()">Redémarrer</button>
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="help-dl">Un problème ? <a href="">Aide</a></p>
+    </div>
+
+    <script>
+
+        // Importation du module
+        const { ipcRenderer } = require('electron');
+        
+        // Création d'un événement qui est appelé lorsque le bouton "Redémarrer" est cliquer
+        function Download() {
+            ipcRenderer.send('download_app');
+        }
+
+    </script>
+
+</body>
