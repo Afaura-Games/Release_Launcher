@@ -2,7 +2,7 @@
   "name": "launcher_afaura-games",
   "version": "1.2.9",
   "description": "Launcher officiel du studio : Afaura Games",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder"

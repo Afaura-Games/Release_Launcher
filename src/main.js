@@ -25,7 +25,7 @@ app.whenReady().then(() => {
 
 // Quand une mise à jour est disponible
 autoUpdater.on("update-available", () => {
-    loadPage('update','update');
+    loadPage('src/loading/update','update');
 });
 
 // Quand aucune mise à jour n'est disponible
@@ -36,7 +36,7 @@ autoUpdater.on("update-not-available", () => {
 
 // Quand la mise à jour vient d'être téléchargée
 autoUpdater.on("update-downloaded", () => {
-    loadPage('download','downloading');
+    loadPage('src/loading/download','downloading');
 });
 
 // Emis lorsqu'une erreur apparait

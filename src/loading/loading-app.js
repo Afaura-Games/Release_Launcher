@@ -23,7 +23,7 @@ function checkingWin() {
     });
     electron.Menu.setApplicationMenu(null);
     checkingWindow.setMenuBarVisibility(false);
-    checkingWindow.loadFile("./checking/checking.html");
+    checkingWindow.loadFile("src/loading/checking/checking.html");
     checkingWindow.once('ready-to-show', () => {
         if (checkingWindow) {
             checkingWindow.show();
@@ -38,7 +38,7 @@ function destroyWindow() {
 
 // Création d'un événement qui permet lors de son appele, de charger dynamiquement des pages html
 function loadPage(folderName, pageName) {
-    checkingWindow.loadFile(`./${folderName}/${pageName}.html`);
+    checkingWindow.loadFile(`${folderName}/${pageName}.html`);
 }
 
 // Permet de récupérer divers information sur une mise à jour, ici elle sont envoyées vers le fichier "update.html"
