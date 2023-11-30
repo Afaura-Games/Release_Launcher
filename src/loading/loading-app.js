@@ -7,12 +7,12 @@ const { autoUpdater } = require("electron-updater");
 // Création de la variable pour gérer la fenêtre
 let checkingWindow = undefined;
 
-// Création d'un événement qui permet de créer une fenêtre lors de son appele
+// Création d'un événement qui permet de créer une fenêtre lors de son appelle
 function checkingWin() {
     checkingWindow = new electron.BrowserWindow({
         title: "Afaura Games - Démarrage",
-        width: 350,
-        height: 400,
+        width: 500,
+        height: 500,
         resizable: false,
         frame: false,
         show: false,
@@ -21,6 +21,7 @@ function checkingWin() {
             nodeIntegration: true
         },
     });
+
     electron.Menu.setApplicationMenu(null);
     checkingWindow.setMenuBarVisibility(false);
     checkingWindow.loadFile("src/loading/checking/checking.html");
@@ -31,12 +32,17 @@ function checkingWin() {
     });
 }
 
-// Création d'un événement qui ferme la fenêtre lors de son appele
+// Création d'un événement qui permet d'agrandir les fenêtres
+ipcMain.on('expand-app', () => {
+    expwin;
+});
+
+// Création d'un événement qui ferme la fenêtre lors de son appelle
 function destroyWindow() {
     checkingWindow.close();
 }
 
-// Création d'un événement qui permet lors de son appele, de charger dynamiquement des pages html
+// Création d'un événement qui permet lors de son appelle, de charger dynamiquement des pages html
 function loadPage(folderName, pageName) {
     checkingWindow.loadFile(`${folderName}/${pageName}.html`);
 }

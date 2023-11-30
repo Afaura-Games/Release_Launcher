@@ -4,10 +4,27 @@ body{
     --main-color: #FF7C00;
     --hover-color: #FF9700;
     font-family: 'Montserrat', sans-serif;
-    --background-color: rgb(223, 223, 223);
+    --background-color: rgb(64,68,75);
     background-color: var(--background-color);
     --point-color: #000000;
     --size: 4px;
+}
+
+/* Animation pour agrandir les fenêtres */
+
+.expand{
+    animation: expandWindow 1.5s ease-in-out forwards;
+}
+
+@keyframes expandWindow{
+    from{
+      width: 250px;
+      height: 250px;
+    }
+    to{
+      width: 450px;
+      height: 450px;
+    }
 }
 
 /* Gestion de la page "checking.html" */
@@ -22,7 +39,7 @@ body{
 .logo-check{
     width: 100px;
     height: 100px;
-    margin-top: -108px;
+    margin-top: 10px;
     background: url('../img/icon-app/icon.ico') center center no-repeat;
     background-size: contain;
     animation: floatAnimation 2.5s ease-in-out;
@@ -30,10 +47,10 @@ body{
 }
 @keyframes floatAnimation{
     0%{
-        transform: translateY(0);
+        transform: translateY(-118px);
     }
     100%{
-        transform: translateY(80px);
+        transform: translateY(0px);
     }
 }
 .loading-circle {
@@ -42,7 +59,7 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 6px solid grey; 
+    border: 6px solid rgb(160, 160, 160); 
     border-top: 6px solid transparent;
     animation: spin 1.3s linear infinite;
 }
@@ -62,7 +79,7 @@ body{
     font-weight: 550;
     max-width: 300px;
     margin-top: 60px;
-    color: grey;
+    color: rgb(160, 160, 160);
 }
 
 /* Gestion de la page "update.html" */
