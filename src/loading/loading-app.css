@@ -10,14 +10,6 @@ body{
     margin: 0px;
 }
 
-/* Animation pour agrandir les fenêtres */
-
-.expand{
-    animation: expandWindow 1.5s ease-in-out forwards;
-}
-
-
-
 /* Gestion de la page "checking.html" */
 
 .check-update-info{

@@ -50,9 +50,9 @@ function checkingWin() {
 /*function expandWindow() {
     checkingWindow.setSize(600, 600, true);
 }*/
-ipcMain.on('content-refreshed', () => {
+/*ipcMain.on('content-refreshed', () => {
     
-});
+});*/
 /**setInterval(() => {
     
     checkingWindow.reload();

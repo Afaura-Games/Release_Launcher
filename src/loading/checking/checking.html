@@ -5,30 +5,29 @@
 </head>
 
 <body>
-    <div class="expand">
-        <!-- Gestion de la police -->
-        <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+    
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
 
-        <!-- Gestion asset général de la fenêtre -->
-        <div class="check-update-info">
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="check-update-info">
 
-            <!-- Affichage du logo -->
-            <div class="logo-check"></div>
+        <!-- Affichage du logo -->
+        <div class="logo-check"></div>
 
-            <!-- Affichage du cercle pour le chargement de la page -->
-            <div class="center">
+        <!-- Affichage du cercle pour le chargement de la page -->
+        <div class="center">
             <div class="loading-circle"></div>
-            </div>
-
-            <!-- Affichage du texte en bas de page -->
-            <p class="version-text">Afaura Games © Tous droits réservés.</p>
         </div>
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="version-text">Afaura Games © Tous droits réservés.</p>
     </div>
-    <script>
+    <!--<script>
         const { ipcRenderer } = require('electron');
         ipcRenderer.on('content-refreshed', (event, data) => {
             // Mettez à jour le contenu de votre page ici
             console.log('Nouveau contenu reçu:', data);
         });
-    </script>
+    </script>-->
 </body>
