@@ -26,8 +26,9 @@
     </div>
     <script>
         const { ipcRenderer } = require('electron');
-        ipcRenderer.on('expand-app', () => {
-            expwin = document.getElementsByClassName("expand")
+        ipcRenderer.on('content-refreshed', (event, data) => {
+            // Mettez à jour le contenu de votre page ici
+            console.log('Nouveau contenu reçu:', data);
         });
     </script>
 </body>

@@ -7,7 +7,7 @@ body{
     --background-color: rgb(64,68,75);
     background-color: var(--background-color);
     --point-color: #000000;
-    --size: 4px;
+    margin: 0px;
 }
 
 /* Animation pour agrandir les fenêtres */
@@ -16,16 +16,7 @@ body{
     animation: expandWindow 1.5s ease-in-out forwards;
 }
 
-@keyframes expandWindow{
-    from{
-      width: 250px;
-      height: 250px;
-    }
-    to{
-      width: 450px;
-      height: 450px;
-    }
-}
+
 
 /* Gestion de la page "checking.html" */
 
@@ -35,6 +26,17 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: expandWindow 1.3s ease-in-out forwards;
+}
+@keyframes expandWindow{
+    from{
+      width: 350px;
+      height: 400px;
+    }
+    to{
+      width: 1280px;
+      height: 720px;
+    }
 }
 .logo-check{
     width: 100px;
