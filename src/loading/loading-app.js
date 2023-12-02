@@ -53,35 +53,36 @@ function expandWindow() {
     let startTime; // Heure de début de l'animation
   
     function animate() {
-      const currentTime = Date.now();
-      const elapsedTime = currentTime - startTime;
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - startTime;
   
-      if (elapsedTime >= animationDuration) {
-        // L'animation est terminée, arrêtez l'intervalle
-        clearInterval(interval);
-      } else {
-        const progress = elapsedTime / animationDuration;
+        if (elapsedTime >= animationDuration) {
+            // L'animation est terminée, arrêtez l'intervalle
+            clearInterval(interval);
+        } 
+        else {
+            const progress = elapsedTime / animationDuration;
   
-        const currentWidth = checkingWindow.getSize()[0];
-        const currentHeight = checkingWindow.getSize()[1];
+            const currentWidth = checkingWindow.getSize()[0];
+            const currentHeight = checkingWindow.getSize()[1];
   
-        const newWidth = currentWidth + (targetWidth - currentWidth) * progress;
-        const newHeight = currentHeight + (targetHeight - currentHeight) * progress;
+            const newWidth = currentWidth + (targetWidth - currentWidth) * progress;
+            const newHeight = currentHeight + (targetHeight - currentHeight) * progress;
   
-        checkingWindow.setSize(Math.round(newWidth), Math.round(newHeight), true);
+            checkingWindow.setSize(Math.round(newWidth), Math.round(newHeight), true);
   
-        const currentPos = checkingWindow.getPosition();
-        const newX = Math.round(currentPos[0] - (newWidth - currentWidth) / 2);
-        const newY = Math.round(currentPos[1] - (newHeight - currentHeight) / 2);
+            const currentPos = checkingWindow.getPosition();
+            const newX = Math.round(currentPos[0] - (newWidth - currentWidth) / 2);
+            const newY = Math.round(currentPos[1] - (newHeight - currentHeight) / 2);
   
-        checkingWindow.setPosition(newX, newY);
-      }
+            checkingWindow.setPosition(newX, newY);
+        }
     }
   
     // Démarrer l'animation
     startTime = Date.now();
-    const interval = setInterval(animate, 6); // 60 FPS
-  }
+    const interval = setInterval(animate, 16); // 60 FPS
+}
   
 
 
