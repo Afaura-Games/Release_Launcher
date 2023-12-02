@@ -12,8 +12,8 @@ let checkingWindow = undefined;
 function checkingWin() {
     checkingWindow = new electron.BrowserWindow({
         title: "Afaura Games - Démarrage",
-        width: 350,
-        height: 400,
+        width: 800,
+        height: 450,
         resizable: false,
         frame: false,
         show: false,
@@ -31,36 +31,65 @@ function checkingWin() {
             checkingWindow.show();
         }
     });
-    /*ipcMain.on('content-refreshed', () => {
-        // Traitez l'événement de rafraîchissement ici
-        checkingWindow.webContents.send('content-refreshed', 'Nouveau contenu');
-    });*/
-    checkingWindow.webContents.on('did-finish-load', () => {
+    //expandWindow()
+    /*checkingWindow.webContents.on('did-finish-load', () => {
         expandWindow(); // Appel automatique de la fonction pour agrandir la fenêtre au chargement
-    });
+    });*/
+
+    // Retarde le lancement de l'animation de 5 secondes
+    setTimeout(() => {
+        expandWindow();
+    }, 5000);
     
     
 }
-//checkingWindow.center();
-// Création d'un événement qui permet d'agrandir les fenêtres
-/*ipcMain.on('expand-app', () => {
-    expwin;
-});*/
 
-/*function expandWindow() {
-    checkingWindow.setSize(600, 600, true);
-}*/
-/*ipcMain.on('content-refreshed', () => {
-    
-});*/
-/**setInterval(() => {
-    
-    checkingWindow.reload();
-}, 16);*/
 
 function expandWindow() {
-    const targetWidth = 1285;
-    const targetHeight = 725;
+    const targetWidth = 1280;
+    const targetHeight = 720;
+    const animationDuration = 1000; // Durée totale de l'animation en millisecondes
+  
+    let startTime; // Heure de début de l'animation
+  
+    function animate() {
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - startTime;
+  
+      if (elapsedTime >= animationDuration) {
+        // L'animation est terminée, arrêtez l'intervalle
+        clearInterval(interval);
+      } else {
+        const progress = elapsedTime / animationDuration;
+  
+        const currentWidth = checkingWindow.getSize()[0];
+        const currentHeight = checkingWindow.getSize()[1];
+  
+        const newWidth = currentWidth + (targetWidth - currentWidth) * progress;
+        const newHeight = currentHeight + (targetHeight - currentHeight) * progress;
+  
+        checkingWindow.setSize(Math.round(newWidth), Math.round(newHeight), true);
+  
+        const currentPos = checkingWindow.getPosition();
+        const newX = Math.round(currentPos[0] - (newWidth - currentWidth) / 2);
+        const newY = Math.round(currentPos[1] - (newHeight - currentHeight) / 2);
+  
+        checkingWindow.setPosition(newX, newY);
+      }
+    }
+  
+    // Démarrer l'animation
+    startTime = Date.now();
+    const interval = setInterval(animate, 6); // 60 FPS
+  }
+  
+
+
+
+
+/*function expandWindow() {
+    const targetWidth = 1283;
+    const targetHeight = 723;
   
     const interval = setInterval(() => {
         if (checkingWindow && !checkingWindow.isDestroyed()) {
@@ -69,8 +98,8 @@ function expandWindow() {
             let currentWidth = currentSize[0];
             let currentHeight = currentSize[1];
   
-            currentWidth += (targetWidth - currentWidth) * 0.1;
-            currentHeight += (targetHeight - currentHeight) * 0.1;
+            currentWidth += (targetWidth - currentWidth) * 0.0009;
+            currentHeight += (targetHeight - currentHeight) * 0.0009;
   
             checkingWindow.setSize(Math.round(currentWidth), Math.round(currentHeight), true);
   
@@ -86,14 +115,14 @@ function expandWindow() {
         }
         else {
             // La fenêtre est détruite (fermée), arrêtez l'interval
-            console.log("function is down")
+            //console.log("function is down")
             clearInterval(interval);
         }
         //console.log(checkingWindow.getSize());
-    }, 16); // ~60 FPS
+    }, 16.66); // ~60 FPS
     //console.log(checkingWindow.getSize());
     //console.log(checkingWindow.getPosition());
-}
+}*/
   
 
 // Création d'un événement qui ferme la fenêtre lors de son appelle

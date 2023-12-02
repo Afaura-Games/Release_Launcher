@@ -6,7 +6,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     --background-color: rgb(64,68,75);
     background-color: var(--background-color);
-    --point-color: #000000;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     margin: 0px;
 }
 
@@ -18,12 +20,12 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: expandWindow 1.3s ease-in-out forwards;
+    /*animation: expandWindow 1.3s ease-in-out forwards;*/
 }
 @keyframes expandWindow{
     from{
-      width: 350px;
-      height: 400px;
+      width: 800px;
+      height: 450px;
     }
     to{
       width: 1280px;
