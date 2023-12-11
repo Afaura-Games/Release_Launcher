@@ -1,7 +1,7 @@
 
 // Importation des modules
 const electron = require("electron");
-require('electron-debug')({ showDevTools: false });
+//require('electron-debug')({ showDevTools: false });
 const { ipcMain } = require('electron');
 const { autoUpdater } = require("electron-updater");
 
@@ -12,8 +12,8 @@ let checkingWindow = undefined;
 function checkingWin() {
     checkingWindow = new electron.BrowserWindow({
         title: "Afaura Games - Démarrage",
-        width: 800,
-        height: 450,
+        width: 350,
+        height: 400,
         resizable: false,
         frame: false,
         show: false,
@@ -37,17 +37,15 @@ function checkingWin() {
     });*/
 
     // Retarde le lancement de l'animation de 5 secondes
-    setTimeout(() => {
+    /*setTimeout(() => {
         expandWindow();
-    }, 5000);
-    
-    
+    }, 5000);*/
 }
 
 
 function expandWindow() {
-    const targetWidth = 1280;
-    const targetHeight = 720;
+    const targetWidth = 400;
+    const targetHeight = 500;
     const animationDuration = 1000; // Durée totale de l'animation en millisecondes
   
     let startTime; // Heure de début de l'animation
@@ -155,5 +153,6 @@ ipcMain.on('download_app', () => {
 module.exports = {
     checkingWin,
     destroyWindow,
-    loadPage
+    loadPage,
+    expandWindow
 };

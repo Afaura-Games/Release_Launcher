@@ -3,7 +3,7 @@
 const { app, BrowserWindow } = require('electron');
 const { autoUpdater } = require("electron-updater");
 const {LauncherWin} = require("./launcher/launcher");
-const {checkingWin, destroyWindow, loadPage} = require("./loading/loading-app");
+const {checkingWin, destroyWindow, loadPage, expandWindow} = require("./loading/loading-app");
 
 // Fait en sorte que la mise à jour ne se télécharge pas automatiquement
 autoUpdater.autoDownload = false;
@@ -26,12 +26,15 @@ app.whenReady().then(() => {
 // Quand une mise à jour est disponible
 autoUpdater.on("update-available", () => {
     loadPage('src/loading/update','update');
+    expandWindow()
 });
 
 // Quand aucune mise à jour n'est disponible
 autoUpdater.on("update-not-available", () => {
-    destroyWindow();
-    LauncherWin();
+    setTimeout(() => {
+        destroyWindow();
+        LauncherWin();
+    }, 2500);
 });
 
 // Quand la mise à jour vient d'être téléchargée
