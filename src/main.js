@@ -25,8 +25,10 @@ app.whenReady().then(() => {
 
 // Quand une mise à jour est disponible
 autoUpdater.on("update-available", () => {
-    loadPage('src/loading/update','update');
-    expandWindow()
+    setTimeout(() => {
+        loadPage('src/loading/update','update');
+        expandWindow()
+    }, 2500);
 });
 
 // Quand aucune mise à jour n'est disponible
