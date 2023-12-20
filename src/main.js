@@ -2,20 +2,20 @@
 // Importation des modules
 const { app, BrowserWindow } = require('electron');
 const { autoUpdater } = require("electron-updater");
-const {LauncherWin} = require("./launcher/launcher");
 const {checkingWin, destroyWindow, loadPage, expandWindow} = require("./loading/loading-app");
+const {connectingWin} = require("./connecting/connecting-app");
 
 // Fait en sorte que la mise à jour ne se télécharge pas automatiquement
 autoUpdater.autoDownload = false;
 
 // Quand l'application s'ouvre pour la première fois
 app.whenReady().then(() => {
-    checkingWin();
+    connectingWin();
 
     // Quand l'application vient de s'ouvrir, mais que aucune fenêtre n'est activé
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            checkingWin();
+            connectingWin();
         }
     })
 
@@ -35,7 +35,7 @@ autoUpdater.on("update-available", () => {
 autoUpdater.on("update-not-available", () => {
     setTimeout(() => {
         destroyWindow();
-        LauncherWin();
+        connectingWin();
     }, 2500);
 });
 

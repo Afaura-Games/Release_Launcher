@@ -1,7 +1,6 @@
-
 // Importation des modules
 const electron = require("electron");
-//require('electron-debug')({ showDevTools: false });
+/*require('electron-debug')({ showDevTools: false });*/
 const { ipcMain } = require('electron');
 const { autoUpdater } = require("electron-updater");
 
@@ -31,18 +30,9 @@ function checkingWin() {
             checkingWindow.show();
         }
     });
-    //expandWindow()
-    /*checkingWindow.webContents.on('did-finish-load', () => {
-        expandWindow(); // Appel automatique de la fonction pour agrandir la fenêtre au chargement
-    });*/
-
-    // Retarde le lancement de l'animation de 5 secondes
-    /*setTimeout(() => {
-        expandWindow();
-    }, 5000);*/
 }
 
-
+//Création d'un événement qui permet lors de son appelle d'agrandir la fenêtre
 function expandWindow() {
     const targetWidth = 400;
     const targetHeight = 500;
@@ -81,48 +71,7 @@ function expandWindow() {
     startTime = Date.now();
     const interval = setInterval(animate, 16); // 60 FPS
 }
-  
 
-
-
-
-/*function expandWindow() {
-    const targetWidth = 1283;
-    const targetHeight = 723;
-  
-    const interval = setInterval(() => {
-        if (checkingWindow && !checkingWindow.isDestroyed()) {
-            //console.log("function is online");
-            const currentSize = checkingWindow.getSize();
-            let currentWidth = currentSize[0];
-            let currentHeight = currentSize[1];
-  
-            currentWidth += (targetWidth - currentWidth) * 0.0009;
-            currentHeight += (targetHeight - currentHeight) * 0.0009;
-  
-            checkingWindow.setSize(Math.round(currentWidth), Math.round(currentHeight), true);
-  
-            const currentPos = checkingWindow.getPosition();
-            const newX = Math.round(currentPos[0] - (currentWidth - currentSize[0]) / 2);
-            const newY = Math.round(currentPos[1] - (currentHeight - currentSize[1]) / 2);
-  
-            checkingWindow.setPosition(newX, newY);
-  
-            if (Math.abs(currentWidth - targetWidth) < 1 && Math.abs(currentHeight - targetHeight) < 1) {
-                clearInterval(interval);
-            }
-        }
-        else {
-            // La fenêtre est détruite (fermée), arrêtez l'interval
-            //console.log("function is down")
-            clearInterval(interval);
-        }
-        //console.log(checkingWindow.getSize());
-    }, 16.66); // ~60 FPS
-    //console.log(checkingWindow.getSize());
-    //console.log(checkingWindow.getPosition());
-}*/
-  
 
 // Création d'un événement qui ferme la fenêtre lors de son appelle
 function destroyWindow() {

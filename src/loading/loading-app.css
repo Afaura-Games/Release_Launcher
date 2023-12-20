@@ -32,7 +32,7 @@ body{
 }
 @keyframes floatAnimation{
     0%{
-        transform: translateY(-118px);
+        transform: translateY(-135px);
     }
     100%{
         transform: translateY(0px);
@@ -87,7 +87,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: expandWindow 1.1s ease-in-out forwards;
+    /*animation: expandWindow 1.1s ease-in-out forwards;*/
 }
 @keyframes expandWindow{
     from{

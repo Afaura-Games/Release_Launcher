@@ -1,0 +1,52 @@
+<head>
+    <link rel="stylesheet" href="./connecting-app.css">
+    <meta charset="utf-8">
+    <script src="./connecting-app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="connecting-info">
+
+        <!-- Affichage du logo -->
+        <div class="logo-connecting"></div>
+
+        <!-- Création du bouton de connexion -->
+        <button class="btn-login" onclick="Login()">Login</button>
+
+        <!-- Création du bouton d'inscription -->
+        <p class="connecting-sign-up">No account yet ? Create an account <a class="btn-sign-up" href="">Sign-Up</a></p>
+
+    </div>
+
+    <div class="div-help-connecting">
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="help-connecting">A problem ? <a class="help" href="">Help</a></p>
+
+    </div>
+
+    <script>
+
+        // Importation du module
+        const { ipcRenderer } = require('electron');
+
+        // Récupération de la version de l'application
+        const dataVersion = require('../../package.json');
+        const version = dataVersion.version;
+
+        // Affichage de la version
+        document.write(`<p class="version-app">V ${version}</p>`);
+
+        // Création d'un événement lorsque le bouton login est cliqué
+        function Login() {
+            ipcRenderer.send('login-app');
+        }
+
+    </script>
+
+</body>

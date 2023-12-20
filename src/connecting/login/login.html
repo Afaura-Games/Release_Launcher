@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="../connecting-app.css">
+    <meta charset="utf-8">
+    <script src="../connecting-app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="login-info">
+
+        <!-- Affichage du logo -->
+        <div class="logo-login"></div>
+
+        <!-- Création des différentes zones de textes -->
+        <div>
+            <label class="email-login" for="email">Email : </label>
+            <input type="text" id="email" placeholder="Entrez votre email" required minlength="4" maxlength="8"/>
+        </div>
+
+        <div>
+            <label class="password-login" for="password">Mot de passe : </label>
+            <input type="password" id="password" placeholder="Entrez votre mot de passe" required minlength="4" maxlength="8"/>
+        </div>
+
+        <!-- Création du bouton d'inscription -->
+        <p class="login-sign-up">No account yet ? Create an account <a class="btn-login-sign-up" href="">Sign-Up</a></p>
+
+    </div>
+
+    <div class="div-help-login">
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="help-login">A problem ? <a class="help-login-2" href="">Help</a></p>
+        
+    </div>
+
+    <script>
+
+        // Importation du module
+        const { ipcRenderer } = require('electron');
+
+        // Récupération de la version de l'application
+        const dataVersion = require('../../../package.json');
+        const version = dataVersion.version;
+
+        // Affichage de la version
+        document.write(`<p class="version-login-app">V ${version}</p>`);
+
+    </script>
+
+</body>
