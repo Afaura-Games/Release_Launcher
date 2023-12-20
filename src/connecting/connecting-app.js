@@ -1,6 +1,6 @@
 // Importation des modules
 const electron = require("electron");
-require('electron-debug')({ showDevTools: false });
+//require('electron-debug')({ showDevTools: false });
 const { ipcMain } = require('electron');
 
 // Création de la variable pour gérer la fenêtre
