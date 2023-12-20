@@ -102,9 +102,11 @@ body{
 }
 .login-sign-up{
     color: rgb(44, 44, 44);
-    margin-top: 25px;
+    margin-top: 0px 0px;
     font-size: 14px;
     font-weight: 600;
+    position: relative;
+    bottom: -35px;
 }
 .btn-login-sign-up{
     color: var(--main-color);
@@ -121,7 +123,7 @@ body{
     text-align: right;
     position: relative;
     left: 20px;
-    bottom: -110px;
+    bottom: -121px;
 }
 .version-login-app{
     color: rgb(44, 44, 44);
@@ -132,7 +134,7 @@ body{
     text-align: left;
     position: relative;
     right: -320px;
-    bottom: -95px;
+    bottom: -106px;
 }
 .help-login-2{
     color: var(--main-color);
@@ -150,14 +152,14 @@ body{
     font-weight: 600;
 }
 input[id="email"]{
-    width: 100px;
+    width: 150px;
     border-radius: 10px;
     border: 1px;
     margin-top: 75px;
     margin-bottom: 25px;
 }
 input[id="password"]{
-    width: 100px;
+    width: 170px;
     border-radius: 10px;
     border: 1px;
 }

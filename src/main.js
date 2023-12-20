@@ -10,12 +10,12 @@ autoUpdater.autoDownload = false;
 
 // Quand l'application s'ouvre pour la première fois
 app.whenReady().then(() => {
-    connectingWin();
+    checkingWin();
 
     // Quand l'application vient de s'ouvrir, mais que aucune fenêtre n'est activé
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            connectingWin();
+            checkingWin();
         }
     })
 
