@@ -102,11 +102,10 @@ body{
 }
 .login-sign-up{
     color: rgb(44, 44, 44);
-    margin-top: 0px 0px;
     font-size: 14px;
     font-weight: 600;
     position: relative;
-    bottom: -35px;
+    bottom: -95px;
 }
 .btn-login-sign-up{
     color: var(--main-color);
@@ -141,25 +140,36 @@ body{
 }
 .email-login{
     color: rgb(44, 44, 44);
-    margin-top: 25px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
+    right: -13px;
+    bottom: -50px;
+    position: relative;
 }
 .password-login{
     color: rgb(44, 44, 44);
-    margin-top: 25px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
+    left: -5px;
+    bottom: -75px;
+    position: relative;
 }
 input[id="email"]{
     width: 150px;
+    max-width: 250px;
+    height: 20px;
     border-radius: 10px;
     border: 1px;
-    margin-top: 75px;
-    margin-bottom: 25px;
+    right: -20px;
+    bottom: -50px;
+    position: relative;
 }
 input[id="password"]{
     width: 170px;
+    height: 20px;
     border-radius: 10px;
     border: 1px;
+    right: -2px;
+    bottom: -75px;
+    position: relative;
 }
