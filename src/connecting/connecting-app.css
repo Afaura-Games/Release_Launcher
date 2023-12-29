@@ -100,12 +100,31 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+.btn-login-app{
+    padding: 12px 0px;
+    width: 220px;
+    max-width: 220px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: -119px;
+}
+.btn-login-app:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
 .login-sign-up{
     color: rgb(44, 44, 44);
     font-size: 14px;
     font-weight: 600;
     position: relative;
-    bottom: -95px;
+    bottom: -135px;
 }
 .btn-login-sign-up{
     color: var(--main-color);
@@ -122,7 +141,7 @@ body{
     text-align: right;
     position: relative;
     left: 20px;
-    bottom: -121px;
+    bottom: -172px;
 }
 .version-login-app{
     color: rgb(44, 44, 44);
@@ -133,7 +152,7 @@ body{
     text-align: left;
     position: relative;
     right: -320px;
-    bottom: -106px;
+    bottom: -157px;
 }
 .help-login-2{
     color: var(--main-color);
@@ -171,5 +190,149 @@ input[id="password"]{
     border: 1px;
     right: -2px;
     bottom: -75px;
+    position: relative;
+}
+
+/* Gestion de la page "sign-up.html" */
+
+.logo-sign-up{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('../img/icon-app/icon.ico') center center no-repeat;
+    background-size: contain;
+}
+.sign-up-info{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn-sign-up-app{
+    padding: 12px 0px;
+    width: 220px;
+    max-width: 220px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: -119px;
+}
+.btn-sign-up-app:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.sign-up-login{
+    color: rgb(44, 44, 44);
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    bottom: -135px;
+}
+.btn-sign-up-login{
+    color: var(--main-color);
+}
+.div-help-sign-up{
+    max-width: 130px;
+}
+.help-sign-up{
+    color: rgb(44, 44, 44);
+    margin: 0px 0px;
+    max-width: 125px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    position: relative;
+    left: 20px;
+    bottom: -152px;
+}
+.version-sign-up-app{
+    color: rgb(44, 44, 44);
+    margin: 0px 0px;
+    max-width: 75px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    right: -320px;
+    bottom: -130px;
+}
+.help-sign-up-2{
+    color: var(--main-color);
+}
+.username-sign-up{
+    color: rgb(44, 44, 44);
+    font-size: 14px;
+    font-weight: 600;
+    right: -13px;
+    bottom: -40px;
+    position: relative;
+}
+.email-sign-up{
+    color: rgb(44, 44, 44);
+    font-size: 14px;
+    font-weight: 600;
+    right: -13px;
+    bottom: -50px;
+    position: relative;
+}
+.password-sign-up{
+    color: rgb(44, 44, 44);
+    font-size: 14px;
+    font-weight: 600;
+    left: -5px;
+    bottom: -75px;
+    position: relative;
+}
+.confirm-password-sign-up{
+    color: rgb(44, 44, 44);
+    font-size: 14px;
+    font-weight: 600;
+    left: -5px;
+    bottom: -85px;
+    position: relative;
+}
+input[id="username_sign-up"]{
+    width: 150px;
+    max-width: 250px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px;
+    right: -20px;
+    bottom: -40px;
+    position: relative;
+}
+input[id="email_sign-up"]{
+    width: 150px;
+    max-width: 250px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px;
+    right: -20px;
+    bottom: -50px;
+    position: relative;
+}
+input[id="password_sign-up"]{
+    width: 170px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px;
+    right: -2px;
+    bottom: -75px;
+    position: relative;
+}
+input[id="confirm-password_sign-up"]{
+    width: 170px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px;
+    right: -2px;
+    bottom: -85px;
     position: relative;
 }

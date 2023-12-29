@@ -19,7 +19,7 @@
         <button class="btn-login" onclick="Login()">Login</button>
 
         <!-- Création du bouton d'inscription -->
-        <p class="connecting-sign-up">No account yet ? Create an account <a class="btn-sign-up" href="">Sign-Up</a></p>
+        <p class="connecting-sign-up">No account yet ? Create an account <a class="btn-sign-up" href="./sign-up/sign-up.html">Sign-Up</a></p>
 
     </div>
 
@@ -44,7 +44,7 @@
 
         // Création d'un événement lorsque le bouton login est cliqué
         function Login() {
-            ipcRenderer.send('login-app');
+            ipcRenderer.send('login');
         }
 
     </script>

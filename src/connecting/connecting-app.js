@@ -1,7 +1,8 @@
 // Importation des modules
 const electron = require("electron");
-//require('electron-debug')({ showDevTools: false });
+require('electron-debug')({ showDevTools: false });
 const { ipcMain } = require('electron');
+const {LauncherWin} = require("../launcher/launcher");
 
 // Création de la variable pour gérer la fenêtre
 let connectingWindow = undefined;
@@ -35,9 +36,24 @@ function loadPage(folderName, pageName) {
     connectingWindow.loadFile(`${folderName}/${pageName}.html`);
 }
 
-ipcMain.on('login-app', () => {
+function destroywindow() {
+    connectingWindow.close()
+}
+
+ipcMain.on('login', () => {
     loadPage('src/connecting/login','login');
 });
+
+ipcMain.on('login-app', () => {
+    destroywindow()
+    LauncherWin()
+});
+
+ipcMain.on('sign-up_app', () => {
+    destroywindow()
+    LauncherWin()
+});
+
 
 
 

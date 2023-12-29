@@ -26,8 +26,11 @@
             <input type="password" id="password" placeholder="Entrez votre mot de passe" required minlength="4" maxlength="8"/>
         </div>
 
+        <!-- Création du bouton de connexion -->
+        <button class="btn-login-app" onclick="Login_app()">Login</button>
+
         <!-- Création du bouton d'inscription -->
-        <p class="login-sign-up">No account yet ? Create an account <a class="btn-login-sign-up" href="">Sign-Up</a></p>
+        <p class="login-sign-up">No account yet ? Create an account <a class="btn-login-sign-up" href="../sign-up/sign-up.html">Sign-Up</a></p>
 
     </div>
 
@@ -49,6 +52,11 @@
 
         // Affichage de la version
         document.write(`<p class="version-login-app">V ${version}</p>`);
+
+        // Création d'un événement lorsque le bouton Login est cliqué
+        function Login_app() {
+            ipcRenderer.send('login-app');
+        }
 
     </script>
 

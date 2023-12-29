@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="../connecting-app.css">
+    <meta charset="utf-8">
+    <script src="../connecting-app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Gestion de la police -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <!-- Gestion asset général de la fenêtre -->
+    <div class="sign-up-info">
+
+        <!-- Affichage du logo -->
+        <div class="logo-sign-up"></div>
+
+        <!-- Création des différentes zones de textes -->
+        <div>
+            <label class="username-sign-up" for="username_sign-up">Username : </label>
+            <input type="text" id="username_sign-up" placeholder="Enter your username" required minlength="4" maxlength="8"/>
+        </div>
+
+        <div>
+            <label class="email-sign-up" for="email_sign-up">Email : </label>
+            <input type="text" id="email_sign-up" placeholder="Enter your email" required minlength="4" maxlength="8"/>
+        </div>
+
+        <div>
+            <label class="password-sign-up" for="password_sign-up">Password : </label>
+            <input type="text" id="password_sign-up" placeholder="Enter your password" required minlength="4" maxlength="8"/>
+        </div>
+
+        <div>
+            <label class="confirm-password-sign-up" for="confirm-password_sign-up">Confirm password : </label>
+            <input type="password" id="confirm-password_sign-up" placeholder="Enter your password" required minlength="4" maxlength="8"/>
+        </div>
+
+        <!-- Création du bouton de connexion -->
+        <button class="btn-sign-up-app" onclick="SignUp_app()">Sign Up</button>
+
+        <!-- Création du bouton d'inscription -->
+        <p class="sign-up-login">An account ? <a class="btn-sign-up-login" href="../login/login.html">Login</a></p>
+
+    </div>
+
+    <div class="div-help-sign-up">
+
+        <!-- Affichage du texte en bas de page -->
+        <p class="help-sign-up">A problem ? <a class="help-sign-up-2" href="">Help</a></p>
+        
+    </div>
+
+    <script>
+
+        // Importation du module
+        const { ipcRenderer } = require('electron');
+
+        // Récupération de la version de l'application
+        const dataVersion = require('../../../package.json');
+        const version = dataVersion.version;
+
+        // Affichage de la version
+        document.write(`<p class="version-sign-up-app">V ${version}</p>`);
+
+        // Création d'un événement lorsque le bouton Sign Up est cliqué
+        function SignUp_app() {
+            ipcRenderer.send('sign-up_app');
+        }
+
+    </script>
+
+    <script>
+
+
+    </script>
+
+</body>
