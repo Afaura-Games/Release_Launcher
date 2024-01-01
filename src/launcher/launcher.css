@@ -14,6 +14,48 @@ body{
 
 /* Gestion de la page "launcher.html" */
 
+.logo-accueil{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
+.logo-jeux{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
+.logo-site-web{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
+.logo-amis{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
+.logo-news{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
+.logo-profil{
+    width: 125px;
+    height: 125px;
+    margin-top: 25px;
+    background: url('') center center no-repeat;
+    background-size: contain;
+}
 .btn-accueil{
     margin-top: 115px;
     padding: 12px 0px;
