@@ -1,10 +1,6 @@
-
-/* 
-            Cette page n'a pour but que de tester le démarrage de l'application, elle sera supprimée/modifiée a l'avenir !!
-                                                Ne rien stocker d'important ici !!
-*/
-
 const electron = require("electron");
+const { ipcMain } = require('electron');
+require('electron-debug')({ showDevTools: false });
 let launcherWindow = undefined;
 
 function LauncherWin() {
@@ -30,9 +26,7 @@ function LauncherWin() {
     });
 }
 
-function Quit() {
-    window.close();
-}
+
 
 module.exports = {
     LauncherWin

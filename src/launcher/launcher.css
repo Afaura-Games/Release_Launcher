@@ -1,12 +1,141 @@
-.test{
-    text-align: center;
-    color: rgb(0, 90, 0);
-    font-size: 50px;
-    margin-top: 15px;
+/* Body général pour toutes les pages inscrites ici */
+
+body{
+    --main-color: #FF7C00;
+    --hover-color: #FF9700;
     font-family: 'Montserrat', sans-serif;
+    --background-color: rgb(64,68,75);
+    background-color: var(--background-color);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }
 
-/* 
-            Cette page n'a pour but que de tester le démarrage de l'application, elle sera supprimée/modifiée a l'avenir !!
-                                                Ne rien stocker d'important ici !!
-*/
+/* Gestion de la page "launcher.html" */
+
+.btn-accueil{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 200px;
+    max-width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    right: -25px;
+}
+.btn-accueil:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.btn-jeux{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 200px;
+    max-width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: -60px;
+    left: -179px;
+}
+.btn-jeux:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.btn-site-web{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 200px;
+    max-width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: -120px;
+    left: -384px;
+}
+.btn-site-web:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.btn-amis{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 55px;
+    max-width: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: 250px;
+    right: -1025px;
+}
+.btn-amis:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.btn-news{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 55px;
+    max-width: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: 250px;
+    right: -1050px;
+}
+.btn-news:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.btn-profil{
+    margin-top: 115px;
+    padding: 12px 0px;
+    width: 55px;
+    max-width: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+    position: relative;
+    bottom: 250px;
+    right: -1075px;
+}
+.btn-profil:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
