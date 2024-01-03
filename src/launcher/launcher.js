@@ -18,7 +18,7 @@ function LauncherWin() {
     });
     electron.Menu.setApplicationMenu(null);
     launcherWindow.setMenuBarVisibility(false);
-    launcherWindow.loadFile("src/launcher/launcher.html");
+    launcherWindow.loadFile("src/launcher/accueil.html");
     launcherWindow.once('ready-to-show', () => {
         if (launcherWindow) {
             launcherWindow.show();
