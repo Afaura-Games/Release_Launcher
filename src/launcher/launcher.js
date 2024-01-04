@@ -1,5 +1,6 @@
 const electron = require("electron");
 const { ipcMain } = require('electron');
+const open = require('open');
 require('electron-debug')({ showDevTools: false });
 let launcherWindow = undefined;
 
@@ -26,6 +27,53 @@ function LauncherWin() {
     });
 }
 
+function loadPage(folderName, pageName) {
+    launcherWindow.loadFile(`${folderName}/${pageName}.html`);
+}
+
+ipcMain.on('accueil', () => {
+    loadPage('src/launcher','accueil');
+});
+
+ipcMain.on('accueil-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('jeux', () => {
+    loadPage('src/launcher','jeux');
+});
+
+ipcMain.on('jeux-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('web', () => {
+    open('https://worldoftanks.eu/fr/tournaments');
+});
+
+ipcMain.on('amis', () => {
+    loadPage('src/launcher/amis','amis');
+});
+
+ipcMain.on('amis-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('notifs', () => {
+    loadPage('src/launcher/notifs','notifs');
+});
+
+ipcMain.on('notifs-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('profil', () => {
+    loadPage('src/launcher/profil','profil');
+});
+
+ipcMain.on('profil-load', () => {
+    launcherWindow.reload();
+});
 
 
 module.exports = {

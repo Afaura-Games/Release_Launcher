@@ -11,9 +11,9 @@
 
         <div>
 
-            <button class="btn-accueil" onclick="">Accueil</button>
-            <button class="btn-jeux" onclick="">Jeux</button>
-            <button class="btn-site-web" onclick="">Site Web</button>
+            <button class="btn-accueil" onclick="accueil()">Accueil</button>
+            <button class="btn-jeux" onclick="jeux()">Jeux</button>
+            <button class="btn-site-web" onclick="web()">Site Web</button>
 
         </div>
 
@@ -27,12 +27,44 @@
         
         <div>
 
-            <button class="btn-amis" onclick=""></button>
-            <button class="btn-news" onclick=""></button>
-            <button class="btn-profil" onclick=""></button>
+            <button class="btn-amis" onclick="amis()"></button>
+            <button class="btn-news" onclick="notifs()"></button>
+            <button class="btn-profil" onclick="profil()"></button>
         
         </div>
+
+        <p class="accueil">Accueil</p>
         
     </div>
+
+    <script>
+
+        const { ipcRenderer } = require('electron');
+
+        function accueil() {
+            ipcRenderer.send('accueil-load')
+        }
+
+        function jeux() {
+            ipcRenderer.send('jeux')
+        }
+
+        function web() {
+            ipcRenderer.send('web')
+        }
+
+        function amis() {
+            ipcRenderer.send('amis')
+        }
+
+        function notifs() {
+            ipcRenderer.send('notifs')
+        }
+
+        function profil() {
+            ipcRenderer.send('profil')
+        }
+
+    </script>
 
 </body>

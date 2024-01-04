@@ -175,8 +175,8 @@ body{
 }
 input[id="email"]{
     width: 150px;
-    max-width: 250px;
-    height: 20px;
+    max-width: 150px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -20px;
@@ -185,7 +185,8 @@ input[id="email"]{
 }
 input[id="password"]{
     width: 170px;
-    height: 20px;
+    max-width: 170px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -2px;
@@ -300,8 +301,8 @@ input[id="password"]{
 }
 input[id="username_sign-up"]{
     width: 150px;
-    max-width: 250px;
-    height: 20px;
+    max-width: 150px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -20px;
@@ -310,8 +311,8 @@ input[id="username_sign-up"]{
 }
 input[id="email_sign-up"]{
     width: 150px;
-    max-width: 250px;
-    height: 20px;
+    max-width: 150px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -20px;
@@ -320,7 +321,8 @@ input[id="email_sign-up"]{
 }
 input[id="password_sign-up"]{
     width: 170px;
-    height: 20px;
+    max-width: 170px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -2px;
@@ -329,7 +331,8 @@ input[id="password_sign-up"]{
 }
 input[id="confirm-password_sign-up"]{
     width: 170px;
-    height: 20px;
+    max-width: 170px;
+    height: 23px;
     border-radius: 10px;
     border: 1px;
     right: -2px;
