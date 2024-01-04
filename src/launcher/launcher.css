@@ -193,7 +193,7 @@ body{
     color: rgb(26, 26, 26);
     position: relative;
     bottom: 130px;
-    right: -282px;
+    right: -560px;
 }
 
 /* Gestion de la page "jeux.html" */
@@ -398,7 +398,7 @@ input[id="zone-recherche"]{
     color: rgb(26, 26, 26);
     position: relative;
     bottom: 150px;
-    right: -282px;
+    right: -586px;
 }
 .installed{
     font-weight: 700;
@@ -407,7 +407,7 @@ input[id="zone-recherche"]{
     margin: 0px;
     color: rgb(196, 196, 196);
     position: relative;
-    bottom: 125px;
+    bottom: 150px;
     right: -282px;
 }
 .available{
@@ -417,8 +417,54 @@ input[id="zone-recherche"]{
     margin: 0px;
     color: rgb(196, 196, 196);
     position: relative;
-    bottom: -100px;
+    bottom: -77px;
     right: -282px;
+}
+.d-jeux-1{
+    width: 140px;
+    max-width: 140px;
+    height: 155px;
+    max-height: 155px;
+    margin: 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(79, 128, 0);
+    position: relative;
+    bottom: -64px;
+    right: -282px;
+}
+.cube-fight{
+    font-weight: 600;
+    font-size: 15px;
+    max-width: 135px;
+    margin: 0px;
+    color: rgb(196, 196, 196);
+    position: relative;
+    bottom: -76px;
+    right: -282px;
+}
+.download{
+    padding: 12px 0px;
+    width: 30px;
+    max-width: 30px;
+    height: 28px;
+    max-height: 28px;
+    background-color: rgba(128, 128, 0, 0);
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    bottom: -48px;
+    right: -364px;
+}
+.download-icon{
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background: url('../img/icon/download_icon.png') center center no-repeat;
+    background-size: contain;
+    position: relative;
+    bottom: -56px;
+    right: -385px;
 }
 
 /* Gestion de la page "amis.html" */
