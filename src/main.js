@@ -15,7 +15,7 @@ app.whenReady().then(() => {
     // Quand l'application vient de s'ouvrir, mais que aucune fenêtre n'est activé
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0) {
-            connectingWin(); 
+            connectingWin();
         }
     })
 
