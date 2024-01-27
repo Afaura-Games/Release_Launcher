@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" href="../../launcher.css">
+    <meta charset="utf-8">
+    <script src="../../launcher.js" defer></script>
+</head>
+
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <div class="launcher-info">
+
+        <div>
+
+            <button class="btn-accueil" onclick="accueil()">Accueil</button>
+            <button class="btn-jeux" onclick="jeux()">Jeux</button>
+            <button class="btn-site-web" onclick="web()">Site Web</button>
+
+        </div>
+
+        <div class="logo-accueil"></div>
+        <div class="logo-jeux"></div>
+        <div class="logo-site-web"></div>
+
+        <div class="logo-amis"></div>
+        <div class="logo-news"></div>
+        <div class="logo-profil"></div>
+        
+        <div>
+
+            <button class="btn-amis" onclick="amis()"></button>
+            <button class="btn-news" onclick="notifs()"></button>
+            <button class="btn-profil" onclick="profil()"></button>
+        
+        </div>
+
+        <p class="accueil">Accueil</p>
+
+        <div>
+
+            <p class="barre-menu"></p>
+            <button class="news-launcher" onclick="newslauncher()">News Launcher</button>
+            <button class="news-jeux" onclick="newsjeux()">News Games</button>
+            <button class="news-divers" onclick="newsdivers()">News Varied</button>
+
+        </div>
+        
+    </div>
+
+    <script>
+
+        const { ipcRenderer } = require('electron');
+
+        function accueil() {
+            ipcRenderer.send('accueil-load')
+        }
+
+        function jeux() {
+            ipcRenderer.send('jeux')
+        }
+
+        function web() {
+            ipcRenderer.send('web')
+        }
+
+        function amis() {
+            ipcRenderer.send('amis')
+        }
+
+        function notifs() {
+            ipcRenderer.send('notifs')
+        }
+
+        function profil() {
+            ipcRenderer.send('profil')
+        }
+
+        function newslauncher() {
+            ipcRenderer.send('newslauncher')
+        }
+
+        function newsjeux() {
+            ipcRenderer.send('newsjeux')
+        }
+
+        function newsdivers() {
+            ipcRenderer.send('newsdivers-load')
+        }
+
+    </script>
+
+</body>

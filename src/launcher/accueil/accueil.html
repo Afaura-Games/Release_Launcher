@@ -1,7 +1,7 @@
 <head>
-    <link rel="stylesheet" href="launcher.css">
+    <link rel="stylesheet" href="../launcher.css">
     <meta charset="utf-8">
-    <script src="launcher.js" defer></script>
+    <script src="../launcher.js" defer></script>
 </head>
 
 <body>
@@ -34,6 +34,15 @@
         </div>
 
         <p class="accueil">Accueil</p>
+
+        <div>
+
+            <p class="barre-menu"></p>
+            <button class="news-launcher" onclick="newslauncher()">News Launcher</button>
+            <button class="news-jeux" onclick="newsjeux()">News Games</button>
+            <button class="news-divers" onclick="newsdivers()">News Varied</button>
+
+        </div>
         
     </div>
 
@@ -63,6 +72,18 @@
 
         function profil() {
             ipcRenderer.send('profil')
+        }
+
+        function newslauncher() {
+            ipcRenderer.send('newslauncher-load')
+        }
+
+        function newsjeux() {
+            ipcRenderer.send('newsjeux')
+        }
+
+        function newsdivers() {
+            ipcRenderer.send('newsdivers')
         }
 
     </script>

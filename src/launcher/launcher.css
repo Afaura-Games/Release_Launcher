@@ -20,7 +20,7 @@ body{
     background: url('../img/icon/house_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: -63px;
+    bottom: -228px;
     right: -45px;
 }
 .logo-jeux{
@@ -29,7 +29,7 @@ body{
     background: url('../img/icon/game_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: -97px;
+    bottom: -262px;
     right: -45px;
 }
 .logo-site-web{
@@ -38,7 +38,7 @@ body{
     background: url('../img/icon/web-site_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: -130px;
+    bottom: -295px;
     right: -45px;
 }
 .logo-amis{
@@ -47,7 +47,7 @@ body{
     background: url('../img/icon/amis_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 105px;
+    bottom: 95px;
     right: -1040px;
 }
 .logo-news{
@@ -56,7 +56,7 @@ body{
     background: url('../img/icon/notifs_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 129px;
+    bottom: 119px;
     right: -1090px;
 }
 .logo-profil{
@@ -65,7 +65,7 @@ body{
     background: url('../img/icon/profil_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 153px;
+    bottom: 143px;
     right: -1146px;
 }
 .btn-accueil{
@@ -81,7 +81,7 @@ body{
     border-radius: 10px;
     transition: background 0.2s;
     position: relative;
-    bottom: -100px;
+    bottom: -265px;
     right: -25px;
 }
 .btn-accueil:hover{
@@ -101,7 +101,7 @@ body{
     border-radius: 10px;
     transition: background 0.2s;
     position: relative;
-    bottom: -160px;
+    bottom: -325px;
     left: -179px;
 }
 .btn-jeux:hover{
@@ -121,7 +121,7 @@ body{
     border-radius: 10px;
     transition: background 0.2s;
     position: relative;
-    bottom: -220px;
+    bottom: -385px;
     left: -384px;
 }
 .btn-site-web:hover{
@@ -140,7 +140,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1035px;
 }
 .btn-amis:hover{
@@ -159,7 +159,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1050px;
 }
 .btn-news:hover{
@@ -178,7 +178,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1070px;
 }
 .btn-profil:hover{
@@ -192,8 +192,81 @@ body{
     margin: 0px;
     color: rgb(26, 26, 26);
     position: relative;
-    bottom: 130px;
+    bottom: 195px;
     right: -560px;
+}
+.barre-menu{
+    width: 564px;
+    max-width: 564px;
+    height: 46px;
+    max-height: 46px;
+    margin: 0px;
+    border: none;
+    border-radius: 18px;
+    background-color: rgb(85, 91, 100);
+    position: relative;
+    bottom: 160px;
+    right: -347px;
+}
+.news-launcher{
+    width: 150px;
+    max-width: 150px;
+    height: 36px;
+    max-height: 36px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: #a77e58;
+    position: relative;
+    bottom: 201px;
+    right: -375px;
+}
+.news-launcher:hover{
+    cursor: pointer;
+}
+.news-jeux{
+    width: 150px;
+    max-width: 150px;
+    height: 36px;
+    max-height: 36px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: #a77e58;
+    position: relative;
+    bottom: 201px;
+    right: -400px;
+}
+.news-jeux:hover{
+    cursor: pointer;
+}
+.news-divers{
+    width: 150px;
+    max-width: 150px;
+    height: 36px;
+    max-height: 36px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: #a77e58;
+    position: relative;
+    bottom: 201px;
+    right: -425px;
+}
+.news-divers:hover{
+    cursor: pointer;
 }
 
 /* Gestion de la page "jeux.html" */
@@ -231,7 +304,7 @@ body{
     background: url('../img/icon/amis_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 105px;
+    bottom: 95px;
     right: -1040px;
 }
 .logo-news_2{
@@ -240,7 +313,7 @@ body{
     background: url('../img/icon/notifs_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 129px;
+    bottom: 119px;
     right: -1090px;
 }
 .logo-profil_2{
@@ -249,7 +322,7 @@ body{
     background: url('../img/icon/profil_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 153px;
+    bottom: 143px;
     right: -1146px;
 }
 .btn-accueil_2{
@@ -324,7 +397,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1035px;
 }
 .btn-amis_2:hover{
@@ -343,7 +416,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1050px;
 }
 .btn-news_2:hover{
@@ -362,7 +435,7 @@ body{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1070px;
 }
 .btn-profil_2:hover{
@@ -387,7 +460,7 @@ input[id="zone-recherche"]{
     border: 1px;
     background-color: rgb(230, 230, 230);
     position: relative;
-    bottom: 320px;
+    bottom: 250px;
     right: -525px;
 }
 .jeux{
@@ -397,7 +470,7 @@ input[id="zone-recherche"]{
     margin: 0px;
     color: rgb(26, 26, 26);
     position: relative;
-    bottom: 150px;
+    bottom: 212px;
     right: -586px;
 }
 .installed{
@@ -502,7 +575,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/amis_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 105px;
+    bottom: 95px;
     right: -1040px;
 }
 .logo-news_3{
@@ -511,7 +584,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/notifs_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 129px;
+    bottom: 119px;
     right: -1090px;
 }
 .logo-profil_3{
@@ -520,7 +593,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/profil_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 153px;
+    bottom: 143px;
     right: -1146px;
 }
 .btn-accueil_3{
@@ -595,7 +668,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1035px;
 }
 .btn-amis_3:hover{
@@ -614,7 +687,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1050px;
 }
 .btn-news_3:hover{
@@ -633,7 +706,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1070px;
 }
 .btn-profil_3:hover{
@@ -676,7 +749,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/amis_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 105px;
+    bottom: 95px;
     right: -1040px;
 }
 .logo-news_4{
@@ -685,7 +758,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/notifs_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 129px;
+    bottom: 119px;
     right: -1090px;
 }
 .logo-profil_4{
@@ -694,7 +767,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/profil_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 153px;
+    bottom: 143px;
     right: -1146px;
 }
 .btn-accueil_4{
@@ -769,7 +842,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1035px;
 }
 .btn-amis_4:hover{
@@ -788,7 +861,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1050px;
 }
 .btn-news_4:hover{
@@ -807,7 +880,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1070px;
 }
 .btn-profil_4:hover{
@@ -850,7 +923,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/amis_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 105px;
+    bottom: 95px;
     right: -1040px;
 }
 .logo-news_5{
@@ -859,7 +932,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/notifs_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 129px;
+    bottom: 119px;
     right: -1090px;
 }
 .logo-profil_5{
@@ -868,7 +941,7 @@ input[id="zone-recherche"]{
     background: url('../img/icon/profil_icon.png') center center no-repeat;
     background-size: contain;
     position: relative;
-    bottom: 153px;
+    bottom: 143px;
     right: -1146px;
 }
 .btn-accueil_5{
@@ -943,7 +1016,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1035px;
 }
 .btn-amis_5:hover{
@@ -962,7 +1035,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1050px;
 }
 .btn-news_5:hover{
@@ -981,7 +1054,7 @@ input[id="zone-recherche"]{
     border: none;
     border-radius: 10px;
     position: relative;
-    bottom: 180px;
+    bottom: 170px;
     right: -1070px;
 }
 .btn-profil_5:hover{

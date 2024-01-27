@@ -19,7 +19,7 @@ function LauncherWin() {
     });
     electron.Menu.setApplicationMenu(null);
     launcherWindow.setMenuBarVisibility(false);
-    launcherWindow.loadFile("src/launcher/accueil.html");
+    launcherWindow.loadFile("src/launcher/accueil/accueil.html");
     launcherWindow.once('ready-to-show', () => {
         if (launcherWindow) {
             launcherWindow.show();
@@ -32,7 +32,7 @@ function loadPage(folderName, pageName) {
 }
 
 ipcMain.on('accueil', () => {
-    loadPage('src/launcher','accueil');
+    loadPage('src/launcher/accueil','accueil');
 });
 
 ipcMain.on('accueil-load', () => {
@@ -72,6 +72,30 @@ ipcMain.on('profil', () => {
 });
 
 ipcMain.on('profil-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('newslauncher', () => {
+    loadPage('src/launcher/accueil','accueil');
+});
+
+ipcMain.on('newslauncher-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('newsjeux', () => {
+    loadPage('src/launcher/accueil/news-jeux','news-jeux');
+});
+
+ipcMain.on('newsjeux-load', () => {
+    launcherWindow.reload();
+});
+
+ipcMain.on('newsdivers', () => {
+    loadPage('src/launcher/accueil/news-divers','news-divers');
+});
+
+ipcMain.on('newsdivers-load', () => {
     launcherWindow.reload();
 });
 
