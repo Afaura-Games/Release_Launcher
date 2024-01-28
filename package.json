@@ -13,9 +13,11 @@
     "releaseType": "release"
   },
   "build": {
+    "appId": "com.afaura-games.studio",
     "productName": "Afaura Games",
+    "copyright": "Copyright © 2024 Afaura Games",
     "win": {
-      "icon": "./src/img/icon-app/icon.ico",
+      "icon": "./src/img/icon-app/logo_A.png",
       "target": "nsis"
     },
     "directories": {
