@@ -11,30 +11,27 @@
 
         <div>
 
-            <button class="btn-accueil_2" onclick="accueil()">Home</button>
-            <button class="btn-jeux_2" onclick="jeux()">Games</button>
-            <button class="btn-site-web_2" onclick="web()">Site Web</button>
+            <button class="btn-accueil_4" onclick="accueil()">Home</button>
+            <button class="btn-jeux_4" onclick="jeux()">Games</button>
+            <button class="btn-site-web_4" onclick="web()">Site Web</button>
 
         </div>
 
-        <div class="logo-accueil_2"></div>
-        <div class="logo-jeux_2"></div>
-        <div class="logo-site-web_2"></div>
+        <div class="logo-accueil_4"></div>
+        <div class="logo-jeux_4"></div>
+        <div class="logo-site-web_4"></div>
 
-        <div class="logo-amis_2"></div>
-        <div class="logo-news_2"></div>
-        <div class="logo-profil_2"></div>
+        <div class="logo-amis_4"></div>
+        <div class="logo-profil_4"></div>
         
         <div>
 
-            <button class="btn-amis_2" onclick="amis()"></button>
-            <button class="btn-news_2" onclick="notifs()"></button>
-            <button class="btn-profil_2" onclick="profil()"></button>
+            <button class="btn-amis_4" onclick="amis()"></button>
+            <button class="btn-profil_4" onclick="profil()"></button>
         
         </div>
 
         <p class="lance-recemment">recently launched</p>
-        <p class="jeux">Games</p>
         <p class="installed">Installed</p>
         <p class="available">Available</p>
 
@@ -67,10 +64,6 @@
 
         function amis() {
             ipcRenderer.send('amis')
-        }
-
-        function notifs() {
-            ipcRenderer.send('notifs')
         }
 
         function profil() {

@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="../launcher.css">
+    <meta charset="utf-8">
+    <script src="../launcher.js" defer></script>
+</head>
+
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <div class="launcher-info">
+
+        <div>
+
+            <button class="btn-accueil_6" onclick="accueil()">Home</button>
+            <button class="btn-jeux_6" onclick="jeux()">Games</button>
+            <button class="btn-site-web_6" onclick="web()">Site Web</button>
+
+        </div>
+
+        <div class="logo-accueil_6"></div>
+        <div class="logo-jeux_6"></div>
+        <div class="logo-site-web_6"></div>
+
+        <div class="logo-amis_6"></div>
+        <div class="logo-profil_6"></div>
+        
+        <div>
+
+            <button class="btn-amis_6" onclick="amis()"></button>
+            <button class="btn-profil_6" onclick="profil()"></button>
+        
+        </div>
+
+        <div>
+
+            <p class="friends-menu_2"></p>
+            <button class="friends_2" onclick="friends()">Friends</button>
+            <button class="add-friends_2" onclick="addfriends()">Add Friends</button>
+
+        </div>
+        
+    </div>
+
+    <script>
+
+        const { ipcRenderer } = require('electron');
+
+        function accueil() {
+            ipcRenderer.send('accueil')
+        }
+
+        function jeux() {
+            ipcRenderer.send('jeux')
+        }
+
+        function web() {
+            ipcRenderer.send('web')
+        }
+
+        function amis() {
+            ipcRenderer.send('amis-load')
+        }
+
+        function profil() {
+            ipcRenderer.send('profil')
+        }
+
+        function friends() {
+            ipcRenderer.send('friends')
+        }
+
+        function addfriends() {
+            ipcRenderer.send('add-friends-load')
+        }
+
+    </script>
+
+</body>

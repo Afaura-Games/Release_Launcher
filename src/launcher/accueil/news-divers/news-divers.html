@@ -11,36 +11,32 @@
 
         <div>
 
-            <button class="btn-accueil" onclick="accueil()">Home</button>
-            <button class="btn-jeux" onclick="jeux()">Games</button>
-            <button class="btn-site-web" onclick="web()">Site Web</button>
+            <button class="btn-accueil_3" onclick="accueil()">Home</button>
+            <button class="btn-jeux_3" onclick="jeux()">Games</button>
+            <button class="btn-site-web_3" onclick="web()">Site Web</button>
 
         </div>
 
-        <div class="logo-accueil"></div>
-        <div class="logo-jeux"></div>
-        <div class="logo-site-web"></div>
+        <div class="logo-accueil_3"></div>
+        <div class="logo-jeux_3"></div>
+        <div class="logo-site-web_3"></div>
 
-        <div class="logo-amis"></div>
-        <div class="logo-news"></div>
-        <div class="logo-profil"></div>
+        <div class="logo-amis_3"></div>
+        <div class="logo-profil_3"></div>
         
         <div>
 
-            <button class="btn-amis" onclick="amis()"></button>
-            <button class="btn-news" onclick="notifs()"></button>
-            <button class="btn-profil" onclick="profil()"></button>
+            <button class="btn-amis_3" onclick="amis()"></button>
+            <button class="btn-profil_3" onclick="profil()"></button>
         
         </div>
 
-        <p class="accueil">Home</p>
-
         <div>
 
-            <p class="barre-menu"></p>
-            <button class="news-launcher" onclick="newslauncher()">News Launcher</button>
-            <button class="news-jeux" onclick="newsjeux()">News Games</button>
-            <button class="news-divers" onclick="newsdivers()">News Varied</button>
+            <p class="news-menu_3"></p>
+            <button class="news-launcher_3" onclick="newslauncher()">News Launcher</button>
+            <button class="news-jeux_3" onclick="newsjeux()">News Games</button>
+            <button class="news-divers_3" onclick="newsdivers()">News Varied</button>
 
         </div>
         
@@ -64,10 +60,6 @@
 
         function amis() {
             ipcRenderer.send('amis')
-        }
-
-        function notifs() {
-            ipcRenderer.send('notifs')
         }
 
         function profil() {
