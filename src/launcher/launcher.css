@@ -13,11 +13,68 @@ body{
 }
 
 /* Gestion de la page "accueil.html" */
-
+.top-barre{
+    width: 1280px;
+    max-width: 1280px;
+    height: 40px;
+    max-height: 40px;
+    margin: 0px;
+    border: none;
+    background-color: rgb(47, 49, 54);
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+}
+.logo-reduce-btn_1{
+    width: 38px;
+    height: 38px;
+    margin: 0px;
+    background: url('../img/icon/reduce-app.png') center no-repeat;
+    background-size: contain;
+    position: relative;
+    bottom: 342px;
+    right: -1166px;
+}
+.logo-close-btn_1{
+    width: 22px;
+    height: 22px;
+    margin: 0px;
+    background: url('../img/icon/close-app.png') center no-repeat;
+    background-size: contain;
+    position: relative;
+    bottom: 374px;
+    right: -1228px;
+}
+.reduce-btn{
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
+    max-height: 30px;
+    margin: 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: #a4ac40;
+    position: relative;
+    bottom: 35px;
+    right: -1170px;
+}
+.close-btn{
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
+    max-height: 30px;
+    margin: 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: #a4ac40;
+    position: relative;
+    bottom: 35px;
+    right: -1190px;
+}
 .logo-accueil_1{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -26,7 +83,7 @@ body{
 .logo-jeux_1{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -35,7 +92,7 @@ body{
 .logo-site-web_1{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -44,7 +101,7 @@ body{
 .logo-amis_1{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -53,7 +110,7 @@ body{
 .logo-profil_1{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -236,7 +293,7 @@ body{
 .logo-accueil_2{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -245,7 +302,7 @@ body{
 .logo-jeux_2{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -254,7 +311,7 @@ body{
 .logo-site-web_2{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -263,7 +320,7 @@ body{
 .logo-amis_2{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -272,7 +329,7 @@ body{
 .logo-profil_2{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -455,7 +512,7 @@ body{
 .logo-accueil_3{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -464,7 +521,7 @@ body{
 .logo-jeux_3{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -473,7 +530,7 @@ body{
 .logo-site-web_3{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -482,7 +539,7 @@ body{
 .logo-amis_3{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -491,7 +548,7 @@ body{
 .logo-profil_3{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -674,7 +731,7 @@ body{
 .logo-accueil_4{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -63px;
@@ -683,7 +740,7 @@ body{
 .logo-jeux_4{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -97px;
@@ -692,7 +749,7 @@ body{
 .logo-site-web_4{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -130px;
@@ -701,7 +758,7 @@ body{
 .logo-amis_4{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -710,7 +767,7 @@ body{
 .logo-profil_4{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -895,7 +952,7 @@ input[id="zone-recherche"]{
     width: 28px;
     height: 28px;
     border-radius: 10px;
-    background: url('../img/icon/download_icon.png') center center no-repeat;
+    background: url('../img/icon/download_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -56px;
@@ -907,7 +964,7 @@ input[id="zone-recherche"]{
 .logo-accueil_5{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -916,7 +973,7 @@ input[id="zone-recherche"]{
 .logo-jeux_5{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -925,7 +982,7 @@ input[id="zone-recherche"]{
 .logo-site-web_5{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -934,7 +991,7 @@ input[id="zone-recherche"]{
 .logo-amis_5{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -943,7 +1000,7 @@ input[id="zone-recherche"]{
 .logo-profil_5{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -1106,7 +1163,7 @@ input[id="zone-recherche"]{
 .logo-accueil_6{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -1115,7 +1172,7 @@ input[id="zone-recherche"]{
 .logo-jeux_6{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -1124,7 +1181,7 @@ input[id="zone-recherche"]{
 .logo-site-web_6{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -1133,7 +1190,7 @@ input[id="zone-recherche"]{
 .logo-amis_6{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -1142,7 +1199,7 @@ input[id="zone-recherche"]{
 .logo-profil_6{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
@@ -1305,7 +1362,7 @@ input[id="zone-recherche"]{
 .logo-accueil_7{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/house_icon.png') center center no-repeat;
+    background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -228px;
@@ -1314,7 +1371,7 @@ input[id="zone-recherche"]{
 .logo-jeux_7{
     width: 28px;
     height: 28px;
-    background: url('../img/icon/game_icon.png') center center no-repeat;
+    background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -262px;
@@ -1323,7 +1380,7 @@ input[id="zone-recherche"]{
 .logo-site-web_7{
     width: 25px;
     height: 25px;
-    background: url('../img/icon/web-site_icon.png') center center no-repeat;
+    background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: -295px;
@@ -1332,7 +1389,7 @@ input[id="zone-recherche"]{
 .logo-amis_7{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/amis_icon.png') center center no-repeat;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 95px;
@@ -1341,7 +1398,7 @@ input[id="zone-recherche"]{
 .logo-profil_7{
     width: 26px;
     height: 26px;
-    background: url('../img/icon/profil_icon.png') center center no-repeat;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: relative;
     bottom: 121px;
