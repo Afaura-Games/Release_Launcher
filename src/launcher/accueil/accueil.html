@@ -20,11 +20,10 @@
         <p class="logo-accueil_1"></p>
         <p class="logo-jeux_1"></p>
         <p class="logo-site-web_1"></p>
-        <p class="logo-amis_1"></p>
-        <p class="logo-profil_1"></p>
 
-        <button class="btn-amis_1" onclick="amis()"></button>
-        <button class="btn-profil_1" onclick="profil()"></button>
+        <p class="config-amis" id="win_amis"></p>
+        <p class="btn-amis_1" id="amis"></p>
+        <p class="btn-profil_1" onclick="profil()"></p>
         
         <p class="news-menu_1"></p>
         <button class="news-launcher_1" onclick="newsLauncher()">News Launcher</button>
@@ -49,9 +48,9 @@
             ipcRenderer.send('web')
         }
 
-        function amis() {
-            ipcRenderer.send('amis')
-        }
+        //function amis() {
+        //    ipcRenderer.send('amis')
+        //}
 
         function profil() {
             ipcRenderer.send('profil')
@@ -76,6 +75,37 @@
         function closeApp() {
             ipcRenderer.send('close-app')
         }
+
+    </script>
+
+    <script>
+
+        const button_amis = document.querySelector('#amis');
+        let a = 0;
+        button_amis.addEventListener('click', () => {
+            const win_amis = document.querySelector('#win_amis');
+            a++;
+            if(a%2 != 0){
+                const html_string_amis =
+                `<p class="amis-barre"></p>
+                 <p class="amis">Friends</p>
+                 <p class="add-amis">Add Friends</p>`;
+                win_amis.innerHTML = html_string_amis;
+                console.log(a);
+            }
+            else {
+                const html_string_amis =
+                `<p class="amis-barre-reduce"></p>
+                 <p class="amis-reduce">Friends</p>
+                 <p class="add-amis-reduce">Add Friends</p>`;
+                win_amis.innerHTML = html_string_amis;
+                console.log(a);
+            }
+            
+            
+        });
+        
+        
 
     </script>
 

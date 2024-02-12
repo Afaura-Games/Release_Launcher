@@ -30,14 +30,17 @@ body{
     position: absolute;
 }
 .reduce-btn{
-    width: 38px;
-    height: 38px;
+    width: 27px;
+    height: 23px;
     margin: 0px;
     background: url('../img/icon/reduce-app.png') center no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: 341px;
-    right: -600px;
+    bottom: -32px;
+    right: -1180px;
+}
+.reduce-btn:hover{
+    cursor: pointer;
 }
 .close-btn{
     width: 22px;
@@ -46,213 +49,363 @@ body{
     background: url('../img/icon/close-app.png') center no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: 350px;
-    right: -650px;
+    bottom: -32px;
+    right: -1250px;
+}
+.close-btn:hover{
+    cursor: pointer;
+}
+
+/* Config balise pour la fenêtre amis */
+
+.config-amis{
+    margin: 0px;
+    position: absolute;
 }
 
 /* Gestion de la page "accueil.html" */
 
+.amis-barre{
+    width: 325px;
+    height: 550px;
+    margin: 0px;
+    border-radius: 7px;
+    background-color: rgb(91, 98, 107);
+    position: absolute;
+    bottom: -690px;
+    right: -1265px;
+}
+.amis{
+    width: 90px;
+    height: 26px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    border-radius: 15px;
+    background-color: #a77e58;
+    border: none;
+    position: absolute;
+    bottom: -180px;
+    right: -1065px;
+}
+.amis:hover{
+    cursor: pointer;
+}
+.add-amis{
+    width: 125px;
+    height: 26px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    border-radius: 15px;
+    background-color: #a77e58;
+    border: none;
+    position: absolute;
+    bottom: -180px;
+    right: -1230px;
+}
+.add-amis:hover{
+    cursor: pointer;
+}
+.amis-barre-reduce{
+    width: 325px;
+    height: 550px;
+    margin: 0px;
+    border-radius: 7px;
+    background-color: rgb(91, 98, 107);
+    position: absolute;
+    bottom: -690px;
+    right: -1265px;
+    animation: a 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes a {
+    0% {
+        width: 325px;
+        right: -1265px;
+    }
+    25% {
+        width: 244px;
+    }
+    50% {
+        width: 163px;
+    }
+    75% {
+        width: 82px;
+    }
+    100% {
+        width: 0px;
+        right: -1280px;
+    }
+}
+.amis-reduce{
+    width: 90px;
+    height: 26px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    border-radius: 15px;
+    background-color: #a77e58;
+    border: none;
+    position: absolute;
+    bottom: -180px;
+    right: -1065px;
+    animation: b 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes b {
+    0% {
+        width: 90px;
+        right: -1065px;
+        color: white;
+        font-size: 15px;
+    }
+    25% {
+        width: 68px;
+        right: -1125px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 7px;
+    }
+    50% {
+        width: 46px;
+        right: -1170px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+    75% {
+        width: 24px;
+        right: -1220px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+    100% {
+        width: 0px;
+        right: -1280px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+}
+.add-amis-reduce{
+    width: 125px;
+    height: 26px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    border-radius: 15px;
+    background-color: #a77e58;
+    border: none;
+    position: absolute;
+    bottom: -180px;
+    right: -1230px;
+    animation: c 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes c {
+    0% {
+        width: 125px;
+        right: -1230px;
+        color: white;
+        font-size: 15px;
+    }
+    25% {
+        width: 94px;
+        right: -1245px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 7px;
+    }
+    50% {
+        width: 63px;
+        right: -1260px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+    75% {
+        width: 32px;
+        right: -1270px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+    100% {
+        width: 0px;
+        right: -1280px;
+        color: rgba(255, 255, 255, 0);
+        font-size: 0px;
+    }
+}
 .logo-accueil_1{
     width: 28px;
     height: 28px;
+    margin: 0px;
     background: url('../img/icon/house_icon.png') center no-repeat;
     background-size: contain;
-    position: relative;
-    bottom: -228px;
-    right: -45px;
+    position: absolute;
+    bottom: -273px;
+    right: -65px;
 }
 .logo-jeux_1{
     width: 28px;
-    height: 28px;
+    height: 22px;
+    margin: 0px;
     background: url('../img/icon/game_icon.png') center no-repeat;
     background-size: contain;
-    position: relative;
-    bottom: -262px;
-    right: -45px;
+    position: absolute;
+    bottom: -331px;
+    right: -65px;
 }
 .logo-site-web_1{
     width: 25px;
     height: 25px;
+    margin: 0px;
     background: url('../img/icon/web-site_icon.png') center no-repeat;
     background-size: contain;
-    position: relative;
-    bottom: -295px;
-    right: -45px;
-}
-.logo-amis_1{
-    width: 26px;
-    height: 26px;
-    background: url('../img/icon/amis_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: 95px;
-    right: -1040px;
-}
-.logo-profil_1{
-    width: 26px;
-    height: 26px;
-    background: url('../img/icon/profil_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: 121px;
-    right: -1111px;
+    position: absolute;
+    bottom: -393px;
+    right: -65px;
 }
 .btn-accueil_1{
-    padding: 12px 0px;
     width: 200px;
-    max-width: 200px;
+    height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 15px;
     background-color: var(--main-color);
     color: white;
-    border: none;
     border-radius: 10px;
+    border: none;
     transition: background 0.2s;
-    position: relative;
-    bottom: -265px;
-    right: -25px;
+    position: absolute;
+    bottom: -280px;
+    right: -220px;
 }
 .btn-accueil_1:hover{
     background-color: var(--hover-color);
     cursor: pointer;
 }
 .btn-jeux_1{
-    padding: 12px 0px;
     width: 200px;
-    max-width: 200px;
+    height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 15px;
     background-color: var(--main-color);
     color: white;
-    border: none;
     border-radius: 10px;
+    border: none;
     transition: background 0.2s;
-    position: relative;
-    bottom: -325px;
-    left: -179px;
+    position: absolute;
+    bottom: -340px;
+    right: -220px;
 }
 .btn-jeux_1:hover{
     background-color: var(--hover-color);
     cursor: pointer;
 }
 .btn-site-web_1{
-    padding: 12px 0px;
     width: 200px;
-    max-width: 200px;
+    height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 15px;
     background-color: var(--main-color);
     color: white;
-    border: none;
     border-radius: 10px;
+    border: none;
     transition: background 0.2s;
-    position: relative;
-    bottom: -385px;
-    left: -384px;
+    position: absolute;
+    bottom: -400px;
+    right: -220px;
 }
 .btn-site-web_1:hover{
     background-color: var(--hover-color);
     cursor: pointer;
 }
 .btn-amis_1{
-    padding: 12px 0px;
-    width: 33px;
-    max-width: 33px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: rgba(128, 128, 0, 0);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    bottom: 149px;
-    right: -1036px;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/amis_icon.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -115px;
+    right: -1075px;
 }
 .btn-amis_1:hover{
-    background-color: rgba(128, 128, 0, 0);
     cursor: pointer;
 }
 .btn-profil_1{
-    padding: 12px 0px;
-    width: 33px;
-    max-width: 33px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: rgba(128, 128, 0, 0);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    bottom: 149px;
-    right: -1070px;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/profil_icon.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -115px;
+    right: -1150px;
 }
 .btn-profil_1:hover{
-    background-color: rgba(128, 128, 0, 0);
     cursor: pointer;
 }
 .news-menu_1{
     width: 564px;
-    max-width: 564px;
     height: 46px;
-    max-height: 46px;
     margin: 0px;
-    border: none;
     border-radius: 18px;
     background-color: rgb(85, 91, 100);
-    position: relative;
-    bottom: 160px;
-    right: -347px;
+    position: absolute;
+    bottom: -120px;
+    right: -922px;
 }
 .news-launcher_1{
     width: 150px;
-    max-width: 150px;
     height: 36px;
-    max-height: 36px;
     font-weight: 600;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0px;
-    border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
-    bottom: 201px;
-    right: -375px;
+    border: none;
+    position: absolute;
+    bottom: -115px;
+    right: -537px;
 }
 .news-launcher_1:hover{
     cursor: pointer;
 }
 .news-jeux_1{
     width: 150px;
-    max-width: 150px;
     height: 36px;
-    max-height: 36px;
     font-weight: 600;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0px;
-    border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
-    bottom: 201px;
-    right: -400px;
+    border: none;
+    position: absolute;
+    bottom: -115px;
+    right: -714px;
 }
 .news-jeux_1:hover{
     cursor: pointer;
 }
 .news-divers_1{
     width: 150px;
-    max-width: 150px;
     height: 36px;
-    max-height: 36px;
     font-weight: 600;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -261,9 +414,10 @@ body{
     border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
-    bottom: 201px;
-    right: -425px;
+    border: none;
+    position: absolute;
+    bottom: -115px;
+    right: -892px;
 }
 .news-divers_1:hover{
     cursor: pointer;
@@ -274,45 +428,46 @@ body{
 .logo-accueil_2{
     width: 28px;
     height: 28px;
+    margin: 0px;
     background: url('../img/icon/house_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
+    position: absolute;
     bottom: -228px;
     right: -45px;
 }
 .logo-jeux_2{
     width: 28px;
     height: 28px;
+    margin: 0px;
     background: url('../img/icon/game_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
+    position: absolute;
     bottom: -262px;
     right: -45px;
 }
 .logo-site-web_2{
     width: 25px;
     height: 25px;
+    margin: 0px;
     background: url('../img/icon/web-site_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
+    position: absolute;
     bottom: -295px;
     right: -45px;
 }
 .logo-amis_2{
     width: 26px;
     height: 26px;
+    margin: 0px;
     background: url('../img/icon/amis_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
+    position: absolute;
     bottom: 95px;
     right: -1040px;
 }
 .logo-profil_2{
     width: 26px;
     height: 26px;
+    margin: 0px;
     background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
-    position: relative;
+    position: absolute;
     bottom: 121px;
     right: -1111px;
 }
@@ -328,7 +483,7 @@ body{
     border: none;
     border-radius: 10px;
     transition: background 0.2s;
-    position: relative;
+    position: absolute;
     bottom: -265px;
     right: -25px;
 }
@@ -348,7 +503,7 @@ body{
     border: none;
     border-radius: 10px;
     transition: background 0.2s;
-    position: relative;
+    position: absolute;
     bottom: -325px;
     left: -179px;
 }
@@ -368,7 +523,7 @@ body{
     border: none;
     border-radius: 10px;
     transition: background 0.2s;
-    position: relative;
+    position: absolute;
     bottom: -385px;
     left: -384px;
 }
@@ -387,7 +542,7 @@ body{
     color: white;
     border: none;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     bottom: 149px;
     right: -1036px;
 }
@@ -406,7 +561,7 @@ body{
     color: white;
     border: none;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     bottom: 149px;
     right: -1070px;
 }
@@ -423,7 +578,7 @@ body{
     border: none;
     border-radius: 18px;
     background-color: rgb(85, 91, 100);
-    position: relative;
+    position: absolute;
     bottom: 160px;
     right: -347px;
 }
@@ -440,7 +595,7 @@ body{
     border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
+    position: absolute;
     bottom: 201px;
     right: -375px;
 }
@@ -460,7 +615,7 @@ body{
     border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
+    position: absolute;
     bottom: 201px;
     right: -400px;
 }
@@ -480,7 +635,7 @@ body{
     border: none;
     border-radius: 15px;
     background-color: #a77e58;
-    position: relative;
+    position: absolute;
     bottom: 201px;
     right: -425px;
 }
