@@ -76,22 +76,44 @@
             ipcRenderer.send('close-app')
         }
 
-    </script>
+        // Gestion de la partie Amis
 
-    <script>
-
+        function amis_reload() {
+            ipcRenderer.send('amis-reload');
+            
+        }
+        function add_amis_reload() {
+            ipcRenderer.send('add-amis-reload');
+            
+        }
         const button_amis = document.querySelector('#amis');
         let a = 0;
+        function amis_2() {
+            const html_string_amis = 
+            `<p class="amis-barre"></p>
+             <p class="amis" onclick="amis_reload()">Friends</p>
+             <input type="text" id="recherche-amis" placeholder="search friends"/>
+             <p class="add-amis" onclick="add_amis()">Add Friends</p>`;
+            win_amis.innerHTML = html_string_amis;
+        }
+        function add_amis() {
+            const html_string_add_amis = 
+            `<p class="amis-barre"></p>
+             <p class="amis-2" onclick="amis_2()">Friends</p>
+             <input type="text" id="recherche-new-amis" placeholder="search new friend"/>
+             <p class="add-amis-active" onclick="add_amis_reload()">Add Friends</p>`;
+            win_amis.innerHTML = html_string_add_amis;
+        }
         button_amis.addEventListener('click', () => {
             const win_amis = document.querySelector('#win_amis');
             a++;
             if(a%2 != 0){
-                const html_string_amis =
+                const html_string_amis = 
                 `<p class="amis-barre"></p>
-                 <p class="amis">Friends</p>
-                 <p class="add-amis">Add Friends</p>`;
+                 <p class="amis" onclick="amis_reload()">Friends</p>
+                 <input type="text" id="recherche-amis" placeholder="search friendss"/>
+                 <p class="add-amis" onclick="add_amis()">Add Friends</p>`;
                 win_amis.innerHTML = html_string_amis;
-                console.log(a);
             }
             else {
                 const html_string_amis =
@@ -99,13 +121,14 @@
                  <p class="amis-reduce">Friends</p>
                  <p class="add-amis-reduce">Add Friends</p>`;
                 win_amis.innerHTML = html_string_amis;
-                console.log(a);
             }
-            
-            
+
+                    /*const html_string_amis =
+                    `<p class="amis-barre-reduce"></p>
+                     <p class="amis-2-reduce">Friends</p>
+                     <p class="add-amis-active-reduce">Add Friends</p>`;
+                    win_amis.innerHTML = html_string_amis;*/
         });
-        
-        
 
     </script>
 
