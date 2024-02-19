@@ -9,28 +9,15 @@
 
     <div class="launcher-info">
 
-        <div>
+        <p class="top-barre"></p>
+        <p class="reduce-btn" onclick="reduceApp()"></p>
+        <p class="close-btn" onclick="closeApp()"></p>
 
-            <button class="btn-accueil_7" onclick="accueil()">Home</button>
-            <button class="btn-jeux_7" onclick="jeux()">Games</button>
-            <button class="btn-site-web_7" onclick="web()">Site Web</button>
+        <p class="back-home" onclick="accueil()"></p>
 
-        </div>
-
-        <div class="logo-accueil_7"></div>
-        <div class="logo-jeux_7"></div>
-        <div class="logo-site-web_7"></div>
-
-        <div class="logo-amis_7"></div>
-        <div class="logo-profil_7"></div>
-        
-        <div>
-
-            <button class="btn-amis_7" onclick="amis()"></button>
-            <button class="btn-profil_7" onclick="profil()"></button>
-        
-        </div>
-        <p>p</p>
+        <button class="account">Account</button>
+        <button class="setting-friends">Friends Setting</button>
+        <button class="voice-message">Voice & Message</button>
         
     </div>
 
@@ -42,20 +29,12 @@
             ipcRenderer.send('accueil')
         }
 
-        function jeux() {
-            ipcRenderer.send('jeux')
+        function reduceApp() {
+            ipcRenderer.send('reduce-app')
         }
 
-        function web() {
-            ipcRenderer.send('web')
-        }
-
-        function amis() {
-            ipcRenderer.send('amis')
-        }
-
-        function profil() {
-            ipcRenderer.send('profil-load')
+        function closeApp() {
+            ipcRenderer.send('close-app')
         }
         
     </script>

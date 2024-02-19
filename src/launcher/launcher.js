@@ -56,20 +56,8 @@ function LauncherWin() {
         open('https://worldoftanks.eu/fr/tournaments');
     });
 
-    ipcMain.on('amis', () => {
-        loadPage('src/launcher/amis','amis');
-    });
-
-    ipcMain.on('amis-load', () => {
-        launcherWindow.reload();
-    });
-
     ipcMain.on('profil', () => {
         loadPage('src/launcher/profil','profil');
-    });
-
-    ipcMain.on('profil-load', () => {
-    launcherWindow.reload();
     });
 
     ipcMain.on('newslauncher', () => {
@@ -93,22 +81,6 @@ function LauncherWin() {
     });
 
     ipcMain.on('newsdivers-load', () => {
-        launcherWindow.reload();
-    });
-
-    ipcMain.on('friends', () => {
-    loadPage('src/launcher/amis','amis');
-    });
-
-    ipcMain.on('friends-load', () => {
-        launcherWindow.reload();
-    });
-
-    ipcMain.on('add-friends', () => {
-        loadPage('src/launcher/amis','new-amis');
-    });
-
-    ipcMain.on('add-friends-load', () => {
         launcherWindow.reload();
     });
 }

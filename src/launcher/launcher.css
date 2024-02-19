@@ -1,7 +1,7 @@
 /* Body général pour toutes les pages inscrites ici */
 
 body{
-    --main-color: #FF7C00;
+    --main-color: #cc6300;
     --hover-color: #FF9700;
     font-family: 'Montserrat', sans-serif;
     --background-color: rgb(64,68,75);
@@ -26,7 +26,7 @@ body{
     height: 40px;
     margin: 0px;
     border: none;
-    background-color: rgb(47, 49, 54);
+    background-color: #2e3136;
     position: absolute;
 }
 .reduce-btn{
@@ -63,116 +63,161 @@ body{
     position: absolute;
 }
 
-/* Gestion de la page "accueil.html" */
+/* Gestion de la fenêtre amis */
 
 .amis-barre{
     width: 325px;
-    height: 550px;
+    height: 575px;
     margin: 0px;
     border-radius: 7px;
-    background-color: rgb(91, 98, 107);
+    background-color: #5b616b;
     position: absolute;
-    bottom: -690px;
+    bottom: -705px;
     right: -1265px;
 }
-.amis{
-    width: 90px;
+
+/* Partie Amis */
+.btn-reduce{
+    width: 32px;
     height: 26px;
-    font-weight: 600;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: white;
     margin: 0px;
-    border-radius: 15px;
-    background-color: #a77e58;
-    border-color: #ff0000;
-    border: 5px;
+    background: url('../img/icon/back-amis.png') center no-repeat;
+    background-size: contain;
     position: absolute;
-    bottom: -180px;
-    right: -1065px;
+    bottom: -171px;
+    right: -990px;
 }
-.amis:hover{
+.btn-reduce:hover{
     cursor: pointer;
 }
-.amis-2{
-    width: 90px;
-    height: 26px;
+.btn-add-amis{
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/add-friends.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -173px;
+    right: -1250px;
+}
+.btn-add-amis:hover{
+    cursor: pointer;
+}
+.amis{
+    width: 140px;
+    height: 28px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     color: white;
     margin: 0px;
     border-radius: 15px;
     background-color: #a77e58;
     border: none;
     position: absolute;
-    bottom: -180px;
-    right: -1065px;
-}
-.amis-2:hover{
-    cursor: pointer;
+    bottom: -174px;
+    right: -1172px;
 }
 input[id="recherche-amis"]{
-    width: 180px;
-    height: 25px;
-    border-radius: 10px;
-    border: 1px;
-    background-color: rgb(230, 230, 230);
+    width: 250px;
+    height: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 12px;
+    border: none;
+    margin: 0px;
+    padding: 10px;
+    background-color: #25272b;
+    color: white;
     position: absolute;
     bottom: -230px;
-    right: -1192px;
+    right: -1228px;
 }
-input[id="recherche-new-amis"]{
-    width: 180px;
-    height: 25px;
-    border-radius: 10px;
-    border: 1px;
-    background-color: rgb(230, 230, 230);
-    position: absolute;
-    bottom: -230px;
-    right: -1192px;
-}
-.add-amis{
-    width: 125px;
-    height: 26px;
-    font-weight: 600;
-    font-size: 15px;
+input[id="recherche-amis"]::placeholder{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+}
+input[id="recherche-amis"]:focus{
+    border: 1px solid #FF7C00;
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Partie Add Amis */
+
+.btn-back{
+    width: 32px;
+    height: 26px;
+    margin: 0px;
+    background: url('../img/icon/back-amis.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -171px;
+    right: -990px;
+}
+.btn-back:hover{
+    cursor: pointer;
+}
+.add-amis{
+    width: 140px;
+    height: 28px;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0px;
     border-radius: 15px;
     background-color: #a77e58;
     border: none;
     position: absolute;
-    bottom: -180px;
-    right: -1230px;
+    bottom: -174px;
+    right: -1172px;
 }
-.add-amis:hover{
-    cursor: pointer;
+input[id="recherche-new-amis"]{
+    width: 250px;
+    height: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 12px;
+    border: none;
+    margin: 0px;
+    padding: 10px;
+    background-color: #25272b;
+    color: white;
+    position: absolute;
+    bottom: -230px;
+    right: -1228px;
 }
-.add-amis-active{
-    width: 125px;
-    height: 26px;
-    font-weight: 600;
-    font-size: 15px;
+input[id="recherche-new-amis"]::placeholder{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: white;
+}
+input[id="recherche-new-amis"]:focus{
+    border: 1px solid #FF7C00;
     margin: 0px;
-    border-radius: 15px;
-    background-color: #a77e58;
-    border-color: #ff0000;
-    border: 5px;
-    position: absolute;
-    bottom: -180px;
-    right: -1230px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
 }
-.add-amis-active:hover{
-    cursor: pointer;
-}
+
+/* Gestion des animations de la fenêtre Amis */
+
 .amis-barre-reduce{
     width: 325px;
     height: 550px;
@@ -182,7 +227,7 @@ input[id="recherche-new-amis"]{
     position: absolute;
     bottom: -690px;
     right: -1265px;
-    animation: a 1.5s linear 1;
+    animation: a 1.0s linear 1;
     animation-fill-mode: forwards;
 }
 @keyframes a {
@@ -219,60 +264,10 @@ input[id="recherche-new-amis"]{
     position: absolute;
     bottom: -180px;
     right: -1065px;
-    animation: b 1.5s linear 1;
+    animation: b 1.0s linear 1;
     animation-fill-mode: forwards;
 }
 @keyframes b {
-    0% {
-        width: 90px;
-        right: -1065px;
-        color: white;
-        font-size: 15px;
-    }
-    25% {
-        width: 68px;
-        right: -1125px;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 7px;
-    }
-    50% {
-        width: 46px;
-        right: -1170px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-    75% {
-        width: 24px;
-        right: -1220px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-    100% {
-        width: 0px;
-        right: -1280px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-}
-.amis-2-reduce{
-    width: 90px;
-    height: 26px;
-    font-weight: 600;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: white;
-    margin: 0px;
-    border-radius: 15px;
-    background-color: #a77e58;
-    border: none;
-    position: absolute;
-    bottom: -180px;
-    right: -1065px;
-    animation: d 1.5s linear 1;
-    animation-fill-mode: forwards;
-}
-@keyframes d {
     0% {
         width: 90px;
         right: -1065px;
@@ -319,7 +314,7 @@ input[id="recherche-new-amis"]{
     position: absolute;
     bottom: -180px;
     right: -1230px;
-    animation: c 1.5s linear 1;
+    animation: c 1.0s linear 1;
     animation-fill-mode: forwards;
 }
 @keyframes c {
@@ -354,56 +349,9 @@ input[id="recherche-new-amis"]{
         font-size: 0px;
     }
 }
-.add-amis-active-reduce{
-    width: 125px;
-    height: 26px;
-    font-weight: 600;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: white;
-    margin: 0px;
-    border-radius: 15px;
-    background-color: #a77e58;
-    border: none;
-    position: absolute;
-    bottom: -180px;
-    right: -1230px;
-    animation: e 1.5s linear 1;
-    animation-fill-mode: forwards;
-}
-@keyframes e {
-    0% {
-        width: 125px;
-        right: -1230px;
-        color: white;
-        font-size: 15px;
-    }
-    25% {
-        width: 94px;
-        right: -1245px;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 7px;
-    }
-    50% {
-        width: 63px;
-        right: -1260px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-    75% {
-        width: 32px;
-        right: -1270px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-    100% {
-        width: 0px;
-        right: -1280px;
-        color: rgba(255, 255, 255, 0);
-        font-size: 0px;
-    }
-}
+
+/* Gestion de la page "accueil.html" */
+
 .logo-accueil_1{
     width: 28px;
     height: 28px;
@@ -492,27 +440,27 @@ input[id="recherche-new-amis"]{
     cursor: pointer;
 }
 .btn-amis_1{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 0px;
     background: url('../img/icon/amis_icon.png') center no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: -115px;
+    bottom: -104px;
     right: -1075px;
 }
 .btn-amis_1:hover{
     cursor: pointer;
 }
 .btn-profil_1{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 0px;
     background: url('../img/icon/profil_icon.png') center no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: -115px;
-    right: -1150px;
+    bottom: -104px;
+    right: -1155px;
 }
 .btn-profil_1:hover{
     cursor: pointer;
@@ -522,7 +470,7 @@ input[id="recherche-new-amis"]{
     height: 46px;
     margin: 0px;
     border-radius: 18px;
-    background-color: rgb(85, 91, 100);
+    background-color: #525760;
     position: absolute;
     bottom: -120px;
     right: -922px;
@@ -536,7 +484,7 @@ input[id="recherche-new-amis"]{
     color: white;
     margin: 0px;
     border-radius: 15px;
-    background-color: #a77e58;
+    background-color: #9a7451;
     border: none;
     position: absolute;
     bottom: -115px;
@@ -554,7 +502,7 @@ input[id="recherche-new-amis"]{
     color: white;
     margin: 0px;
     border-radius: 15px;
-    background-color: #a77e58;
+    background-color: #9a7451;
     border: none;
     position: absolute;
     bottom: -115px;
@@ -573,7 +521,7 @@ input[id="recherche-new-amis"]{
     margin: 0px;
     border: none;
     border-radius: 15px;
-    background-color: #a77e58;
+    background-color: #9a7451;
     border: none;
     position: absolute;
     bottom: -115px;
@@ -1655,146 +1603,62 @@ input[id="zone-recherche"]{
 
 /* Gestion de la page "profil.html" */
 
-.logo-accueil_7{
-    width: 28px;
-    height: 28px;
-    background: url('../img/icon/house_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: -228px;
-    right: -45px;
-}
-.logo-jeux_7{
-    width: 28px;
-    height: 28px;
-    background: url('../img/icon/game_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: -262px;
-    right: -45px;
-}
-.logo-site-web_7{
-    width: 25px;
-    height: 25px;
-    background: url('../img/icon/web-site_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: -295px;
-    right: -45px;
-}
-.logo-amis_7{
-    width: 26px;
-    height: 26px;
-    background: url('../img/icon/amis_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: 95px;
-    right: -1040px;
-}
-.logo-profil_7{
-    width: 26px;
-    height: 26px;
-    background: url('../img/icon/profil_icon.png') center no-repeat;
-    background-size: contain;
-    position: relative;
-    bottom: 121px;
-    right: -1111px;
-}
-.btn-accueil_7{
-    padding: 12px 0px;
-    width: 200px;
-    max-width: 200px;
-    font-family: 'Montserrat', sans-serif;
+.account{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    background-color: var(--main-color);
     color: white;
     border: none;
-    border-radius: 10px;
-    transition: background 0.2s;
-    position: relative;
-    bottom: -265px;
-    right: -25px;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -280px;
+    right: -200px;
+
 }
-.btn-accueil_7:hover{
-    background-color: var(--hover-color);
-    cursor: pointer;
-}
-.btn-jeux_7{
-    padding: 12px 0px;
-    width: 200px;
-    max-width: 200px;
-    font-family: 'Montserrat', sans-serif;
+.setting-friends{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    background-color: var(--main-color);
     color: white;
     border: none;
-    border-radius: 10px;
-    transition: background 0.2s;
-    position: relative;
-    bottom: -325px;
-    left: -179px;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -380px;
+    right: -200px;
 }
-.btn-jeux_7:hover{
-    background-color: var(--hover-color);
-    cursor: pointer;
-}
-.btn-site-web_7{
-    padding: 12px 0px;
-    width: 200px;
-    max-width: 200px;
-    font-family: 'Montserrat', sans-serif;
+.voice-message{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    background-color: var(--main-color);
     color: white;
     border: none;
-    border-radius: 10px;
-    transition: background 0.2s;
-    position: relative;
-    bottom: -385px;
-    left: -384px;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -480px;
+    right: -200px;
 }
-.btn-site-web_7:hover{
-    background-color: var(--hover-color);
-    cursor: pointer;
+.back-home{
+    width: 36px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/back-amis.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -155px;
+    right: -145px;
 }
-.btn-amis_7{
-    padding: 12px 0px;
-    width: 33px;
-    max-width: 33px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: rgba(128, 128, 0, 0);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    bottom: 149px;
-    right: -1036px;
-}
-.btn-amis_7:hover{
-    background-color: rgba(128, 128, 0, 0);
-    cursor: pointer;
-}
-.btn-profil_7{
-    padding: 12px 0px;
-    width: 33px;
-    max-width: 33px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: rgba(128, 128, 0, 0);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    bottom: 149px;
-    right: -1070px;
-}
-.btn-profil_7:hover{
-    background-color: rgba(128, 128, 0, 0);
+.back-home:hover{
     cursor: pointer;
 }

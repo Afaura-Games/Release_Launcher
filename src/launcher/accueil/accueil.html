@@ -48,10 +48,6 @@
             ipcRenderer.send('web')
         }
 
-        //function amis() {
-        //    ipcRenderer.send('amis')
-        //}
-
         function profil() {
             ipcRenderer.send('profil')
         }
@@ -78,56 +74,65 @@
 
         // Gestion de la partie Amis
 
-        function amis_reload() {
-            ipcRenderer.send('amis-reload');
-            
-        }
-        function add_amis_reload() {
-            ipcRenderer.send('add-amis-reload');
-            
-        }
         const button_amis = document.querySelector('#amis');
         let a = 0;
-        function amis_2() {
-            const html_string_amis = 
-            `<p class="amis-barre"></p>
-             <p class="amis" onclick="amis_reload()">Friends</p>
-             <input type="text" id="recherche-amis" placeholder="search friends"/>
-             <p class="add-amis" onclick="add_amis()">Add Friends</p>`;
+
+        function reduce() {
+            const html_string_amis =
+            `<p class="amis-barre-reduce"></p>
+             <p class="amis-reduce">Friends</p>
+             <p class="add-amis-reduce">Add Friends</p>`;
             win_amis.innerHTML = html_string_amis;
+            if(a%2 != 0){
+                let b = 0;
+                b = a;
+                a = a - b;
+            }
+            else {}
+            console.log("reduce : ", a)
         }
-        function add_amis() {
-            const html_string_add_amis = 
-            `<p class="amis-barre"></p>
-             <p class="amis-2" onclick="amis_2()">Friends</p>
-             <input type="text" id="recherche-new-amis" placeholder="search new friend"/>
-             <p class="add-amis-active" onclick="add_amis_reload()">Add Friends</p>`;
-            win_amis.innerHTML = html_string_add_amis;
-        }
-        button_amis.addEventListener('click', () => {
-            const win_amis = document.querySelector('#win_amis');
-            a++;
+
+        function back() {
+            console.log("back : ", a)
             if(a%2 != 0){
                 const html_string_amis = 
                 `<p class="amis-barre"></p>
-                 <p class="amis" onclick="amis_reload()">Friends</p>
-                 <input type="text" id="recherche-amis" placeholder="search friendss"/>
-                 <p class="add-amis" onclick="add_amis()">Add Friends</p>`;
+                 <p class="btn-reduce" onclick="reduce()"></p>
+                 <button class="amis">Friends</button>
+                 <p class="btn-add-amis" onclick="add_amis()"></p>
+                 <input type="text" id="recherche-amis" spellcheck="false" placeholder="search friends"/>`;
                 win_amis.innerHTML = html_string_amis;
             }
             else {
-                const html_string_amis =
-                `<p class="amis-barre-reduce"></p>
-                 <p class="amis-reduce">Friends</p>
-                 <p class="add-amis-reduce">Add Friends</p>`;
+                reduce()
+            }
+        }
+
+        function add_amis() {
+            const html_string_add_amis = 
+            `<p class="amis-barre"></p>
+             <p class="btn-back" onclick="back()"></p>
+             <button class="add-amis">Add Friends</button>
+             <input type="text" id="recherche-new-amis" spellcheck="false" placeholder="search new friend"/>`;
+            win_amis.innerHTML = html_string_add_amis;
+        }
+
+        button_amis.addEventListener('click', () => {
+            const win_amis = document.querySelector('#win_amis');
+            a++;
+            console.log("open : ", a)
+            if(a%2 != 0){
+                const html_string_amis = 
+                `<p class="amis-barre"></p>
+                 <p class="btn-reduce" onclick="reduce()"></p>
+                 <button class="amis">Friends</button>
+                 <p class="btn-add-amis" onclick="add_amis()"></p>
+                 <input type="text" id="recherche-amis" spellcheck="false" placeholder="search friends"/>`;
                 win_amis.innerHTML = html_string_amis;
             }
-
-                    /*const html_string_amis =
-                    `<p class="amis-barre-reduce"></p>
-                     <p class="amis-2-reduce">Friends</p>
-                     <p class="add-amis-active-reduce">Add Friends</p>`;
-                    win_amis.innerHTML = html_string_amis;*/
+            else {
+                reduce()
+            }
         });
 
     </script>
