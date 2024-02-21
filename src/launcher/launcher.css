@@ -1601,7 +1601,7 @@ input[id="zone-recherche"]{
     cursor: pointer;
 }
 
-/* Gestion de la page "profil.html" */
+/* Gestion de la page "account.html" */
 
 .account{
     width: 150px;
@@ -1613,11 +1613,14 @@ input[id="zone-recherche"]{
     color: white;
     border: none;
     border-radius: 12px;
-    background-color: #9a7451;
+    background-color: #8d6a4a;
     position: absolute;
     bottom: -280px;
     right: -200px;
 
+}
+.account:hover{
+    cursor: pointer;
 }
 .setting-friends{
     width: 150px;
@@ -1634,6 +1637,9 @@ input[id="zone-recherche"]{
     bottom: -380px;
     right: -200px;
 }
+.setting-friends:hover{
+    cursor: pointer;
+}
 .voice-message{
     width: 150px;
     height: 36px;
@@ -1649,6 +1655,9 @@ input[id="zone-recherche"]{
     bottom: -480px;
     right: -200px;
 }
+.voice-message:hover{
+    cursor: pointer;
+}
 .back-home{
     width: 36px;
     height: 30px;
@@ -1660,5 +1669,147 @@ input[id="zone-recherche"]{
     right: -145px;
 }
 .back-home:hover{
+    cursor: pointer;
+}
+
+/* Gestion de la page "setting-friends.html" */
+
+.account_2{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -280px;
+    right: -200px;
+
+}
+.account_2:hover{
+    cursor: pointer;
+}
+.setting-friends_2{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #8d6a4a;
+    position: absolute;
+    bottom: -380px;
+    right: -200px;
+}
+.setting-friends_2:hover{
+    cursor: pointer;
+}
+.voice-message_2{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -480px;
+    right: -200px;
+}
+.voice-message_2:hover{
+    cursor: pointer;
+}
+.back-home_2{
+    width: 36px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/back-amis.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -155px;
+    right: -145px;
+}
+.back-home_2:hover{
+    cursor: pointer;
+}
+
+/* Gestion de la page "voice-message.html" */
+
+.account_3{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -280px;
+    right: -200px;
+
+}
+.account_3:hover{
+    cursor: pointer;
+}
+.setting-friends_3{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #9a7451;
+    position: absolute;
+    bottom: -380px;
+    right: -200px;
+}
+.setting-friends_3:hover{
+    cursor: pointer;
+}
+.voice-message_3{
+    width: 150px;
+    height: 36px;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #8d6a4a;
+    position: absolute;
+    bottom: -480px;
+    right: -200px;
+}
+.voice-message_3:hover{
+    cursor: pointer;
+}
+.back-home_3{
+    width: 36px;
+    height: 30px;
+    margin: 0px;
+    background: url('../img/icon/back-amis.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -155px;
+    right: -145px;
+}
+.back-home_3:hover{
     cursor: pointer;
 }

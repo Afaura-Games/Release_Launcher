@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="../launcher.css">
+    <meta charset="utf-8">
+    <script src="../launcher.js" defer></script>
+</head>
+
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+
+    <div class="launcher-info">
+
+        <p class="top-barre"></p>
+        <p class="reduce-btn" onclick="reduceApp()"></p>
+        <p class="close-btn" onclick="closeApp()"></p>
+
+        <p class="back-home_3" onclick="accueil()"></p>
+
+        <button class="account_3" onclick="account()">Account</button>
+        <button class="setting-friends_3" onclick="setting()">Friends Setting</button>
+        <button class="voice-message_3" onclick="message()">Voice & Message</button>
+        
+    </div>
+
+    <script>
+
+        const { ipcRenderer } = require('electron');
+
+        function accueil() {
+            ipcRenderer.send('accueil')
+        }
+
+        function reduceApp() {
+            ipcRenderer.send('reduce-app')
+        }
+
+        function closeApp() {
+            ipcRenderer.send('close-app')
+        }
+
+        function account() {
+            ipcRenderer.send('account')
+        }
+
+        function setting() {
+            ipcRenderer.send('setting')
+        }
+
+        function message() {
+            ipcRenderer.send('message-load')
+        }
+        
+    </script>
+
+</body>

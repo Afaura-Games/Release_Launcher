@@ -57,7 +57,7 @@ function LauncherWin() {
     });
 
     ipcMain.on('profil', () => {
-        loadPage('src/launcher/profil','profil');
+        loadPage('src/launcher/setting','account');
     });
 
     ipcMain.on('newslauncher', () => {
@@ -81,6 +81,30 @@ function LauncherWin() {
     });
 
     ipcMain.on('newsdivers-load', () => {
+        launcherWindow.reload();
+    });
+
+    ipcMain.on('account', () => {
+        loadPage('src/launcher/setting','account');
+    });
+
+    ipcMain.on('account-load', () => {
+        launcherWindow.reload();
+    });
+
+    ipcMain.on('setting', () => {
+        loadPage('src/launcher/setting','setting-friends');
+    });
+
+    ipcMain.on('setting-load', () => {
+        launcherWindow.reload();
+    });
+
+    ipcMain.on('message', () => {
+        loadPage('src/launcher/setting','voice-message');
+    });
+
+    ipcMain.on('message-load', () => {
         launcherWindow.reload();
     });
 }

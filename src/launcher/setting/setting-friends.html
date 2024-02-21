@@ -13,11 +13,11 @@
         <p class="reduce-btn" onclick="reduceApp()"></p>
         <p class="close-btn" onclick="closeApp()"></p>
 
-        <p class="back-home" onclick="accueil()"></p>
+        <p class="back-home_2" onclick="accueil()"></p>
 
-        <button class="account">Account</button>
-        <button class="setting-friends">Friends Setting</button>
-        <button class="voice-message">Voice & Message</button>
+        <button class="account_2" onclick="account()">Account</button>
+        <button class="setting-friends_2" onclick="setting()">Friends Setting</button>
+        <button class="voice-message_2" onclick="message()">Voice & Message</button>
         
     </div>
 
@@ -35,6 +35,18 @@
 
         function closeApp() {
             ipcRenderer.send('close-app')
+        }
+
+        function account() {
+            ipcRenderer.send('account')
+        }
+
+        function setting() {
+            ipcRenderer.send('setting-load')
+        }
+
+        function message() {
+            ipcRenderer.send('message')
         }
         
     </script>
