@@ -291,15 +291,7 @@ input[id="password"]{
     bottom: -75px;
     position: relative;
 }
-.confirm-password-sign-up{
-    color: rgb(44, 44, 44);
-    font-size: 14px;
-    font-weight: 600;
-    left: -5px;
-    bottom: -85px;
-    position: relative;
-}
-input[id="username_sign-up"]{
+input[id="username"]{
     width: 150px;
     max-width: 150px;
     height: 23px;
@@ -309,7 +301,7 @@ input[id="username_sign-up"]{
     bottom: -40px;
     position: relative;
 }
-input[id="email_sign-up"]{
+input[id="email"]{
     width: 150px;
     max-width: 150px;
     height: 23px;
@@ -327,15 +319,5 @@ input[id="password_sign-up"]{
     border: 1px;
     right: -2px;
     bottom: -75px;
-    position: relative;
-}
-input[id="confirm-password_sign-up"]{
-    width: 170px;
-    max-width: 170px;
-    height: 23px;
-    border-radius: 10px;
-    border: 1px;
-    right: -2px;
-    bottom: -85px;
     position: relative;
 }

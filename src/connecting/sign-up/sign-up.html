@@ -17,27 +17,22 @@
 
         <!-- Création des différentes zones de textes -->
         <div>
-            <label class="username-sign-up" for="username_sign-up">Username : </label>
-            <input type="text" id="username_sign-up" placeholder="Enter your username" required minlength="4" maxlength="8"/>
+            <label class="username-sign-up" for="username">Username : </label>
+            <input type="text" id="username" placeholder="Enter your username" required minlength="2" maxlength="20"/>
         </div>
 
         <div>
-            <label class="email-sign-up" for="email_sign-up">Email : </label>
-            <input type="text" id="email_sign-up" placeholder="Enter your email" required minlength="4" maxlength="8"/>
+            <label class="email-sign-up" for="email">Email : </label>
+            <input type="text" id="email" placeholder="Enter your email" required/>
         </div>
 
         <div>
-            <label class="password-sign-up" for="password_sign-up">Password : </label>
-            <input type="text" id="password_sign-up" placeholder="Enter your password" required minlength="4" maxlength="8"/>
-        </div>
-
-        <div>
-            <label class="confirm-password-sign-up" for="confirm-password_sign-up">Confirm password : </label>
-            <input type="password" id="confirm-password_sign-up" placeholder="Enter your password" required minlength="4" maxlength="8"/>
+            <label class="password-sign-up" for="password">Password : </label>
+            <input type="password" id="password" placeholder="Enter your password" required minlength="6" maxlength="30"/>
         </div>
 
         <!-- Création du bouton de connexion -->
-        <button class="btn-sign-up-app" onclick="SignUp_app()">Sign Up</button>
+        <button class="btn-sign-up-app" id="submitButton">Sign Up</button>
 
         <!-- Création du bouton d'inscription -->
         <p class="sign-up-login">An account ? <a class="btn-sign-up-login" href="../login/login.html">Login</a></p>
@@ -53,26 +48,56 @@
 
     <script>
 
-        // Importation du module
+        // Importation des modules
         const { ipcRenderer } = require('electron');
-
-        // Récupération de la version de l'application
         const dataVersion = require('../../../package.json');
         const version = dataVersion.version;
 
         // Affichage de la version
         document.write(`<p class="version-sign-up-app">V ${version}</p>`);
-
-        // Création d'un événement lorsque le bouton Sign Up est cliqué
-        function SignUp_app() {
-            ipcRenderer.send('sign-up_app');
-        }
-
+        
     </script>
 
     <script>
 
+        //Importation des modules
+        const { DynamoDBClient, PutItemCommand, GetItemCommand } = require('@aws-sdk/client-dynamodb');
+        const { marshall, unmarshall } = require('@aws-sdk/util-dynamodb');
 
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Cela garantit que le DOM est complètement chargé avant d'attacher des gestionnaires d'événements ou de faire d'autres opérations
+            const submitButton = document.getElementById('submitButton');
+            submitButton.addEventListener('click', () => {
+                const username = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                signUp(username, email, password);
+            });
+        });
+
+        // Configurez l'accès à DynamoDB avec vos informations d'identification
+        const client = new DynamoDBClient({
+            region: 'eu-north-1', // Remplacez par votre région AWS
+            credentials: {
+                accessKeyId: 'AKIA6ODVAFWNFMEVDF5M',
+                secretAccessKey: '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',
+            },
+        });
+
+        function signUp(username, email, password) {
+            const params = {
+                TableName: 'Account-Launcher',
+                Item: marshall({'username': username, 'email': email, 'password': password }, { removeUndefinedValues: true }),
+            };
+  
+            try {
+                client.send(new PutItemCommand(params));
+                console.log('Utilisateur enregistre avec succes.');
+                console.log(username, email, password,)
+            } catch (error) {
+                console.error('Erreur lors de l\'inscription:', error);
+            }
+        }
     </script>
 
 </body>

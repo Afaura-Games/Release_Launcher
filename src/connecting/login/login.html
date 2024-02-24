@@ -18,16 +18,16 @@
         <!-- Création des différentes zones de textes -->
         <div>
             <label class="email-login" for="email">Email : </label>
-            <input type="text" id="email" placeholder="Entrez votre email" required minlength="4" maxlength="8"/>
+            <input type="text" id="email" placeholder="Entrez votre email" required/>
         </div>
 
         <div>
             <label class="password-login" for="password">Mot de passe : </label>
-            <input type="password" id="password" placeholder="Entrez votre mot de passe" required minlength="4" maxlength="8"/>
+            <input type="password" id="password" placeholder="Entrez votre mot de passe" required minlength="6" maxlength="30"/>
         </div>
 
         <!-- Création du bouton de connexion -->
-        <button class="btn-login-app" onclick="Login_app()">Login</button>
+        <button class="btn-login-app" id="loginButton">Login</button>
 
         <!-- Création du bouton d'inscription -->
         <p class="login-sign-up">No account yet ? Create an account <a class="btn-login-sign-up" href="../sign-up/sign-up.html">Sign-Up</a></p>
@@ -43,21 +43,67 @@
 
     <script>
 
-        // Importation du module
-        const { ipcRenderer } = require('electron');
-
-        // Récupération de la version de l'application
+        // Importation des modules
         const dataVersion = require('../../../package.json');
         const version = dataVersion.version;
 
         // Affichage de la version
         document.write(`<p class="version-login-app">V ${version}</p>`);
 
-        // Création d'un événement lorsque le bouton Login est cliqué
-        function Login_app() {
-            ipcRenderer.send('login-app');
-        }
+    </script>
 
+    <script>
+
+        // Importation des modules
+        const { ipcRenderer } = require('electron');
+        const { GetItemCommand, DynamoDBClient } = require('@aws-sdk/client-dynamodb');
+        const { marshall, unmarshall } = require('@aws-sdk/util-dynamodb');
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Cela garantit que le DOM est complètement chargé avant d'attacher des gestionnaires d'événements ou de faire d'autres opérations
+            const loginButton = document.getElementById('loginButton');
+            loginButton.addEventListener('click', () => {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                login(email, password);
+            });
+        });
+
+        // Configurez l'accès à DynamoDB avec vos informations d'identification
+        const client = new DynamoDBClient({
+            region: 'eu-north-1', // Remplacez par votre région AWS
+            credentials: {
+                accessKeyId: 'AKIA6ODVAFWNFMEVDF5M',
+                secretAccessKey: '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',
+            },
+        });
+
+        async function login(email, password) {
+            const params = {
+                TableName: 'Account-Launcher',
+                Key: marshall({ 'email': email }, { removeUndefinedValues: true }),
+            };
+
+            try {
+                const { Item } = await client.send(new GetItemCommand(params));
+
+                if (Item) {
+                    const user = unmarshall(Item);
+                    if (user.password === password) {
+                        console.log('Login réussi.');
+                        // Faites quelque chose après une connexion réussie
+                        ipcRenderer.send('login-app');
+                    } else {
+                        console.log('Mot de passe incorrect.');
+                    }
+                } else {
+                    console.log('Utilisateur non trouvé.');
+                }
+            } catch (error) {
+                console.error('Erreur lors de la connexion:', error);
+            }
+        }
+        
     </script>
 
 </body>

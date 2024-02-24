@@ -49,16 +49,9 @@ ipcMain.on('login-app', () => {
     LauncherWin()
 });
 
-ipcMain.on('sign-up_app', () => {
-    destroywindow()
-    LauncherWin()
-});
-
-
-
 
 
 // Exportation des modules
 module.exports = {
-    connectingWin
+    connectingWin,
 };
